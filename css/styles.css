@@ -1,11 +1,25 @@
-    #logo {
-        width: 35%;
-        height: auto;
-        margin-left: 35px;
-        margin-top: 10px;
-    }
-    
-    .registrarse {
-        text-align: center;
-        margin-top: 10px;
-    }
+#logo {
+    width: 35%;
+    height: auto;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+.registrarse {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#section {
+    margin-top: 40px;
+}
+
+#parrafo {
+    float: left;
+    margin-left: 90px;
+}
+
+#ejemplo1 {
+    position: relative;
+    left: 110px;
+}
