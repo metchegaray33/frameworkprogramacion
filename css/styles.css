@@ -7,11 +7,11 @@
 
 .registrarse {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 #section {
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 #parrafo {
@@ -22,4 +22,40 @@
 #ejemplo1 {
     position: relative;
     left: 110px;
+}
+
+#articulo {
+    float: left;
+    margin-left: 100px
+}
+
+#aside {
+    margin-right: 50px;
+}
+
+#tarjetas {
+    display: inline-block;
+    position: relative;
+    left: 400px;
+    width: 60%;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer .social [class^="icon-"] {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
 }
