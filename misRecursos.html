@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mis Cursos</title>
+    <title>Mis Recursos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/font.css">
@@ -68,20 +68,21 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Mis Cursos</th>
+                    <th scope="col">Todos los recursos educativos</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td colspan="4">Estos son los cursos a los que está inscripto</td>
+                    <td colspan="4">Estos son todos los recursos educativos</td>
                 </tr>
             </tbody>
 
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Curso</th>
-                    <th scope="col">Número de unidades</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Autor</th>
                     <th scope="col">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -95,35 +96,32 @@
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Intro Programación</td>
-                    <td>3</td>
+                    <td>Libro Java</td>
+                    <td>Herramienta</td>
+                    <td>M. Etchegaray</td>
                     <td class="botonesCursos">
-                        <button type="button" class="btn btn-warning">Editar</button>
-                        <button type="button" class="btn btn-primary">Previsualizar</button>
-                        <button type="button" class="btn btn-success">Adm Unidades</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
+                        <button type="button" class="btn btn-success">Previsualizar</button>
+                        <button type="button" class="btn btn-warning" data-toggle="popover" title="Mis Temas" data-content="And here's some amazing content. It's very engaging. Right?">Ver usos</button>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td>Fundamentos</td>
-                    <td>3</td>
+                    <td>Aprender a Programar</td>
+                    <td>Sitio</td>
+                    <td>A. Piccin</td>
                     <td class="botonesCursos">
-                        <button type="button" class="btn btn-warning">Editar</button>
-                        <button type="button" class="btn btn-primary">Previsualizar</button>
-                        <button type="button" class="btn btn-success">Adm Unidades</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
+                        <button type="button" class="btn btn-success">Previsualizar</button>
+                        <button type="button" class="btn btn-warning" data-toggle="popover" title="Mis Temas" data-content="And here's some amazing content. It's very engaging. Right?">Ver usos</button>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td>Seminario Integrador</td>
-                    <td>5</td>
+                    <td>Inicios programación</td>
+                    <td>Plataforma cerrada</td>
+                    <td>S. Aguilera</td>
                     <td class="botonesCursos">
-                        <button type="button" class="btn btn-warning">Editar</button>
-                        <button type="button" class="btn btn-primary">Previsualizar</button>
-                        <button type="button" class="btn btn-success">Adm Unidades</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
+                        <button type="button" class="btn btn-success">Previsualizar</button>
+                        <button type="button" class="btn btn-warning" data-toggle="popover" title="Mis Temas" data-content="And here's some amazing content. It's very engaging. Right?">Ver usos</button>
                     </td>
                 </tr>
             </tbody>
@@ -131,13 +129,16 @@
     </div>
     <div id="botones" class="container">
         <button type="button" class="btn btn-outline-primary btn-lg">Volver</button>
-        <button type="button" class="btn btn-outline-success btn-lg">Nuevo Curso</button>
+        <button type="button" class="btn btn-outline-success btn-lg">Nuevo Recurso</button>
         <button type="button" class="btn btn-outline-secondary btn-lg">Imprimir</button>
     </div>
+
+
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/misRecursos.js"></script>
 </body>
 
 </html>

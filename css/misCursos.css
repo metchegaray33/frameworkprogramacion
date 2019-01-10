@@ -1,9 +1,14 @@
 #misCursos {
     margin-top: 100px;
+    padding: 0%;
 }
 
 #botones {
     position: relative;
     top: 20px;
-    margin-left: 35%;
+    text-align: center;
+}
+
+.botonesCursos {
+    text-align: right;
 }
