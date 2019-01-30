@@ -1,22 +1,22 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mis Cursos</title>
+    <title>Framework UB</title>
+    <!--Bootstrap css-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/misCursos.css">
 </head>
 
 <body>
+    <!--Menu-->
     <div class="row">
         <div class="col-3">
-            <a href="index.html">
-                <img src="./img/logo2.jpg" id="logo" class="rounded float-left" alt="">
-            </a>
+            <img src="./img/logo2.jpg" id="logo" class="rounded float-left" alt="">
         </div>
         <div class="col-lg-6">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -39,8 +39,8 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Dropdown
-                                        </a>
+                                    Dropdown
+                                </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#">Action</a>
                                 <a class="dropdown-item" href="#">Another action</a>
@@ -63,25 +63,28 @@
             </div>
         </div>
     </div>
+    <!--Fin Menu-->
 
-    <div id="misCursos" class="container">
+    <!--Tabla de unidades-->
+    <div id="misUnidades" class="container">
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Mis Cursos</th>
+                    <th scope="col">Mis Unidades</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td colspan="4">Estos son los cursos a los que está inscripto</td>
+                    <td colspan="4">Estas son las unidades de los cursos - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dicta eligendi nulla vero eveniet nisi ipsam impedit alias qui nihil.</td>
                 </tr>
             </tbody>
 
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Curso</th>
-                    <th scope="col">Número de unidades</th>
+                    <th scope="col">Unidad</th>
+                    <th scope="col">Introducción</th>
+                    <th scope="col">Repaso</th>
                     <th scope="col">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -95,8 +98,9 @@
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Intro Programación</td>
-                    <td>3</td>
+                    <td>Variables</td>
+                    <td>En esta unidad...</td>
+                    <td>Hemos visto en...</td>
                     <td class="botonesCursos">
                         <button type="button" class="btn btn-warning">Editar</button>
                         <button type="button" class="btn btn-primary">Previsualizar</button>
@@ -108,8 +112,9 @@
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td>Fundamentos</td>
-                    <td>3</td>
+                    <td>Flujo de control</td>
+                    <td>En esta unidad...</td>
+                    <td>Hemos visto en...</td>
                     <td class="botonesCursos">
                         <button type="button" class="btn btn-warning">Editar</button>
                         <button type="button" class="btn btn-primary">Previsualizar</button>
@@ -119,8 +124,9 @@
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td>Seminario Integrador</td>
-                    <td>5</td>
+                    <td>Recursividad</td>
+                    <td>En esta unidad...</td>
+                    <td>Hemos visto en...</td>
                     <td class="botonesCursos">
                         <button type="button" class="btn btn-warning">Editar</button>
                         <button type="button" class="btn btn-primary">Previsualizar</button>
@@ -131,9 +137,11 @@
             </tbody>
         </table>
     </div>
+    <!--Fin tabla de unidades-->
+
     <div id="botones" class="container">
         <button type="button" class="btn btn-outline-primary btn-lg">Volver</button>
-        <button type="button" class="btn btn-outline-success btn-lg">Nuevo Curso</button>
+        <button type="button" class="btn btn-outline-success btn-lg">Nueva Unidad</button>
         <button type="button" class="btn btn-outline-secondary btn-lg">Imprimir</button>
     </div>
     <!--Scripts-->
@@ -141,5 +149,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
-
-</html>
