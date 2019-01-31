@@ -1,0 +1,19 @@
+#misUnidades {
+    margin-top: 80px;
+}
+
+#botones {
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+
+.colWidth {
+    width: 30px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1700px;
+    }
+}
