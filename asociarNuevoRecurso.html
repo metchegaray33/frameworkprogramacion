@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/admRecursos.css">
+    <link rel="stylesheet" href="css/asociarNuevoRecurso.css">
 </head>
 
 <body>
@@ -66,29 +66,27 @@
     </div>
     <!--Fin Menu-->
 
-    <!--Tabla de recursos-->
-    <div id="admRecursos" class="container">
+    <!--Tabla de asociar nuevo recurso-->
+    <div id="asociarNuevoRecurso" class="container">
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Mis Recursos</th>
-                    <th scope="col"></th>
-                    <th scope="col"> Tema: Variables</th>
-                    <th colspan="4" style="text-align: right"> Unidades del Curso: Introducción a la programación</th>
+                    <th colspan="5">Asociar Nuevos Recursos</th>
+
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td colspan="4">Estas son las unidades de los cursos - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dicta eligendi nulla vero eveniet nisi ipsam impedit alias qui nihil.</td>
+                    <td colspan="4">Acá se pueden asociar nuevos recursos - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dicta eligendi nulla vero eveniet nisi ipsam impedit alias qui nihil.</td>
                 </tr>
             </tbody>
 
             <thead class="thead-dark">
                 <tr>
                     <th scope="col" class="colWidth">#</th>
-                    <th scope="col">Recurso</th>
+                    <th scope="col">Descripción</th>
                     <th scope="col">Tipo</th>
-                    <th scope="col">Tipo</th>
+                    <th scope="col">Autor</th>
                     <th scope="col">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -102,24 +100,33 @@
             <tbody id="filas">
                 <tr>
                     <th scope="row">1</th>
-                    <td>Inicializando</td>
+                    <td>Libro Java</td>
                     <td>Herramienta</td>
-                    <td>Texto</td>
+                    <td>M. Etchegaray</td>
                     <td class="botonesCursos">
                         <button type="button" class="btn btn-primary">Previsualizar</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
+                        <button type="button" class="btn btn-info">Asociar</button>
 
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td>Ejemplos</td>
-                    <td>Herramienta</td>
-                    <td>Audio</td>
-
+                    <td>Aprender a Programar</td>
+                    <td>Sitio</td>
+                    <td>A. Piccin</td>
                     <td class="botonesCursos">
                         <button type="button" class="btn btn-primary">Previsualizar</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
+                        <button type="button" class="btn btn-info">Asociar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Inicips programación</td>
+                    <td>Plataforma cerrada</td>
+                    <td>S. Aguilera</td>
+                    <td class="botonesCursos">
+                        <button type="button" class="btn btn-primary">Previsualizar</button>
+                        <button type="button" class="btn btn-info">Asociar</button>
                     </td>
                 </tr>
             </tbody>
