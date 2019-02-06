@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/contacto.css">
 </head>
 
 <body>
@@ -99,72 +100,71 @@
         </div>
 
     </div>
+    <!--fin modal-->
 
-    <!--parrafos-->
-    <section id="section">
-        <div id="parrafo" class="container">
-            <h2>Title 1</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At repellat incidunt delectus, officiis alias vero facilis nihil odio eaque, iure neque dolorem, distinctio ex eligendi aspernatur ullam odit officia. Excepturi, qui ipsa praesentium
-                modi explicabo facilis quasi ipsum iure optio cupiditate magnam quidem, aspernatur quaerat quibusdam. Quaerat tempora minus mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ipsum pariatur quaerat harum illo, voluptates
-                qui possimus maiores hic quo.
-            </p>
+    <!-- Contact Us Section -->
+    <section class="Material-contact-section section-padding section-dark">
+        <div class="container">
+            <div class="row">
+                <!-- Section Titile -->
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="section-title">Love to Hear From You</h1>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Section Titile -->
+                <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                        using Content.</p>
+
+                    <div class="find-widget">
+                        <a href="http://www.ub.edu.ar/">Universidad de Belgrano</a>
+                    </div>
+                    <div class="find-widget">
+                        <a href="#">Federico Lacroze</a>
+                    </div>
+                    <div class="find-widget">
+                        <a href="#">+ 879-890-9767</a>
+                    </div>
+                </div>
+                <!-- contact form -->
+                <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                    <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+                        <!-- Name -->
+                        <div class="form-group label-floating">
+                            <label class="control-label" for="name">Nombre</label>
+                            <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- email -->
+                        <div class="form-group label-floating">
+                            <label class="control-label" for="email">Email</label>
+                            <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Subject -->
+                        <div class="form-group label-floating">
+                            <label class="control-label">Subject</label>
+                            <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="Please enter your message subject">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Message -->
+                        <div class="form-group label-floating">
+                            <label for="message" class="control-label">Mensaje</label>
+                            <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Form Submit -->
+                        <div class="form-submit mt-5">
+                            <button class="btn btn-common" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Enviar Mensaje</button>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <img id="ejemplo1" src="./img/ejemplo1.jpg" alt="">
     </section>
-    <br/>
-    <article>
-        <div id="articulo" class="container">
-            <h3>title 2</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore provident omnis beatae commodi expedita ipsam atque hic rerum repellat voluptatum! Dolore, necessitatibus. Magni doloribus et incidunt exercitationem inventore veniam, voluptate
-                cum quis nihil, commodi eum dicta quisquam ut. Enim corporis ipsa magnam deleniti, voluptates sequi provident qui, iusto quidem doloribus quam aperiam incidunt reiciendis magni quo voluptate minus? Doloribus, blanditiis necessitatibus
-                quia, fugiat voluptate minus consequuntur rem unde illo sapiente distinctio nisi error nulla quidem officiis sunt soluta consectetur delectus aliquid, perferendis cumque. Nihil ipsam quas minus debitis pariatur nostrum nam quae quidem
-                doloribus, repellat voluptate officia quasi quis explicabo!
-            </p>
-        </div>
-    </article>
-
-    <aside>
-        <div id="aside">
-            <h3>Noticias</h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum provident commodi consequatur cupiditate ipsum ducimus iusto quod odio, omnis esse ipsa inventore saepe magni dolorem ipsam vel laudantium eius accusantium. Vero itaque minima at ullam
-            ipsa explicabo, quod qui magni et excepturi nostrum consectetur pariatur, aut ipsum quam sit.
-        </div>
-    </aside>
-
-    <div id="tarjetas">
-        <div class="card-deck">
-            <div class="card">
-                <img src="./img/vacaciones.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Cerrado por vacaciones</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./img/clases.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Nuevas clases de verano</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./img/inscripciones.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Inscripciones abiertas</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!--footer-->
     <footer class="footer">
