@@ -1,188 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Framework UB</title>
-    <!--Bootstrap css-->
+	<meta charset="UTF-8">
+	<title>Ejemplo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/font.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
 </head>
-
 <body>
-    <!--Menu-->
-    <div class="row">
-        <div class="col-3">
-            <a href="index.html">
-                <img src="./img/logo2.jpg" id="logo" class="rounded float-left" alt="">
-            </a>
-        </div>
-        <div class="col-lg-6">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="misRecursos.html">Recursos Educativos</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="misCursos.html">Mis Cursos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Reportes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Ayuda</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
-            </nav>
-        </div>
-        <div class="col-3">
-            <div class="registrarse">
-                <button type="button" class="btn btn-outline-success">Registrarse</button>
-                <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModalCenter">Iniciar Sesión</button>
-            </div>
-        </div>
-    </div>
+		<header>
+			<div class="container-fluid row">
+					<section class="col-md-2 ">
+						<a href="index.html"><img src="imagenes/universidad.jpg" alt="" class="h-100 w-100"></a>	
+					</section>
+					<section class="col-md-6 ">
+						<nav class="navbar justify-content-center navbar-expand-md mt-4">
+							<ul class="nav nav-pills nav-fill">
+								<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+								<li class="nav-item"><a href="misRecursos.html" class="nav-link">Recursos Educativos</a></li>
+								<li class="nav-item"><a href="misCursos.html" class="nav-link">Mis cursos</a></li>
+								<li class="nav-item  dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reportes</a>
+									<div class="dropdown-menu">
+										<a href="SobreCursos.html" class="dropdown-item">Sobre Cursos</a>
+										<a href="sobreRecursos.html" class="dropdown-item">Sobre Recursos</a>
+									</div>
+								</li>
+								<li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+								<li class="nav-item"><a href="ayuda.html" class="nav-link">Ayuda</a></li>
+							</ul>
+						</nav>
+					</section>
+					<section class="col-md-3 container ">
+							<div class="container">
+								<form action="">
+									<div class="input-group mb-2">
+										<input type="text" class="form-control input-sm" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+											<div class="input-group-append">
+												  <button class="btn btn-outline-secondary btn-sm" type="submit">Search</button>
+											</div>
+										</div>
+								</form>
+							
+							</div>
+							<div class="container h-50" id="divBotones">
+								<button class="btn btn-outline-danger btn-rounded mt-1 " id="btnCrearCuenta">Crear cuenta </button>
+								<button class="btn btn-outline-success ml-2 mt-1" id="btnIniciarSesion" data-toggle="modal" data-target="#modelId">Iniciar Sesion</button>	
+							</div>
+					</section>
+					<section class="col-md-1">
+							<a href="index.html"><img src="imagenes/Spain.png" alt="España"></a>
+							<a href="indexIngles.html"><img src="imagenes/United-kingdom.png" alt="Ingles"></a>
+							<a href="indexFrances.html"><img src="imagenes/France.png" alt="Francia"></a>		
+					</section>							
+			</div>
+			
 
-    <!--Modal-->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Inicio de sesión</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">Introduzca el mail de la facultad</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Recordar Mail</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Aceptar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--fin Modal-->
+			
+			<script>
+				$(document).ready(function() {
+					$('#btnEnviar').click(function(e) {
+						$('#divBotones').empty();
+				
+					});
+				});
+				</script>
 
-    <!--parrafos-->
-    <section id="section">
-        <div id="parrafo" class="container">
-            <h2>Title 1</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At repellat incidunt delectus, officiis alias vero facilis nihil odio eaque, iure neque dolorem, distinctio ex eligendi aspernatur ullam odit officia. Excepturi, qui ipsa praesentium
-                modi explicabo facilis quasi ipsum iure optio cupiditate magnam quidem, aspernatur quaerat quibusdam. Quaerat tempora minus mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ipsum pariatur quaerat harum illo, voluptates
-                qui possimus maiores hic quo.
-            </p>
-        </div>
-        <img id="ejemplo1" src="./img/ejemplo1.jpg" alt="">
-    </section>
-    <br/>
-    <article>
-        <div id="articulo" class="container">
-            <h3>title 2</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore provident omnis beatae commodi expedita ipsam atque hic rerum repellat voluptatum! Dolore, necessitatibus. Magni doloribus et incidunt exercitationem inventore veniam, voluptate
-                cum quis nihil, commodi eum dicta quisquam ut. Enim corporis ipsa magnam deleniti, voluptates sequi provident qui, iusto quidem doloribus quam aperiam incidunt reiciendis magni quo voluptate minus? Doloribus, blanditiis necessitatibus
-                quia, fugiat voluptate minus consequuntur rem unde illo sapiente distinctio nisi error nulla quidem officiis sunt soluta consectetur delectus aliquid, perferendis cumque. Nihil ipsam quas minus debitis pariatur nostrum nam quae quidem
-                doloribus, repellat voluptate officia quasi quis explicabo!
-            </p>
-        </div>
-    </article>
 
-    <aside>
-        <div id="aside">
-            <h3>Noticias</h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum provident commodi consequatur cupiditate ipsum ducimus iusto quod odio, omnis esse ipsa inventore saepe magni dolorem ipsam vel laudantium eius accusantium. Vero itaque minima at ullam
-            ipsa explicabo, quod qui magni et excepturi nostrum consectetur pariatur, aut ipsum quam sit.
-        </div>
-    </aside>
+			<!--MODAL-->
+				<div class="modal fade md-6 border rounded" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+								<div class="modal-header">
+										<h4 class="modal-title text-justify">Iniciar Sesion</h4>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+								</div>
+								<div class="modal-body">
+									<div class="container">
+										<form action="" id="formulario">
+											<div class="input-group">
+												<div class="input-group-prepend">
+													<div class="input-group-text">@</div>
+												</div>
+									 			 <input type="email" class="form-control" id="email" placeholder="Email">
+											</div>
+											<div id="resultadoErrorEmail"></div>
+											<div class="input-group mt-4">
+												<div class="input-group-prepend">
+										  			<div class="input-group-text">@</div>
+												</div>
+												<input type="password" class="form-control" id="password" placeholder="Password">
+											 </div>
+											 <div id="resultadoErrorPassword"></div>
+									</div>
+								</div>
+						<div class="modal-footer d-flex justify-content-center">
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-success" id="btnEnviar">Iniciar Sesion</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+			<!--Fin Modal-->
+		</header>
+		<hr size="30" width="90%">
+		
+		<main>
+			<div class="container-fluid row">
+					<div class="col-md-7 ml-4 mt-3 mb-3" >
+						<h2>Titulo 1</h2>
+						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore non alias, quos omnis, culpa velit quisquam eveniet sint quo nesciunt hic laudantium, explicabo. Quisquam eos magnam magni, non natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus amet temporibus recusandae quaerat! Nisi illo eaque voluptatem ipsam. Velit reiciendis beatae delectus architecto alias at hic cupiditate eius eum quos! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ab alias, fugit iusto cupiditate omnis sapiente commodi, possimus eligendi veniam sunt distinctio sint tempore minus maiores ullam itaque fuga natus.</p>
+					</div>
+					<div class="col-md-4">
+						<img src="imagenes/images.png" alt="imagen">
+					</div>
+					<hr size="30" width="90%">
+			</div>
+			<div class="container-fluid row">
+					<div class="col-md-7 ml-4 mt-3 mb-3">
+						<h2>Titulo 2</h2>
+						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore non alias, quos omnis, culpa velit quisquam eveniet sint quo nesciunt hic laudantium, explicabo. Quisquam eos magnam magni, non natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus amet temporibus recusandae quaerat! Nisi illo eaque voluptatem ipsam. Velit reiciendis beatae delectus architecto alias at hic cupiditate eius eum quos! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ab alias, fugit iusto cupiditate omnis sapiente commodi, possimus eligendi veniam sunt distinctio sint tempore minus maiores ullam itaque fuga natus.</p>
+					</div>
+					<div class="col-md-4">
+						<img src="imagenes/images.png" alt="imagen">
+					</div>
+					<hr size="30" width="90%">
+			</div>
+			<div class="container-fluid row">
+					<div class="col-md-7 ml-4 mt-3 mb-3">
+						<h2>Titulo 3</h2>
+						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore non alias, quos omnis, culpa velit quisquam eveniet sint quo nesciunt hic laudantium, explicabo. Quisquam eos magnam magni, non natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus amet temporibus recusandae quaerat! Nisi illo eaque voluptatem ipsam. Velit reiciendis beatae delectus architecto alias at hic cupiditate eius eum quos! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ab alias, fugit iusto cupiditate omnis sapiente commodi, possimus eligendi veniam sunt distinctio sint tempore minus maiores ullam itaque fuga natus.</p>
+					</div>
+					<div class="col-md-4">
+						<img src="imagenes/images.png" alt="imagen">
+					</div>
+					<hr size="30" width="90%">
+			</div>
+		</main>
+	
+		<footer class="footer">
+				<div class="social">
+					<a href="https://www.facebook.com/Universidad.de.Belgrano/" class="icon-facebook" id="facebook"><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-f.png"></a>
+					<a href="https://twitter.com/ubeduar?lang=es" class="icon-twitter" id="twitter"><img src="https://img.icons8.com/color/30/000000/twitter.png"></a>
+					<a href="" class="icon-instagram" id="instagram"><img src="imagenes/instagram.png" alt=""></a>
+					<a href="" class="icon-linkedin" id="linkedin"><img src="https://img.icons8.com/color/30/000000/linkedin-2.png"></a>
+				</div>
+		</footer>
 
-    <div id="tarjetas">
-        <div class="card-deck">
-            <div class="card">
-                <img src="./img/vacaciones.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Cerrado por vacaciones</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./img/clases.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Nuevas clases de verano</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./img/inscripciones.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Inscripciones abiertas</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!--footer-->
-    <footer class="footer">
-        <div class="social">
-            <a href="" class="icon-facebook"></a>
-            <a href="" class="icon-twitter"></a>
-            <a href="" class="icon-instagram"></a>
-            <a href="" class="icon-vine"></a>
-        </div>
-        <p class="copy">&copy; Bruno Valverde 2019 - Todos los derechos reservados</p>
-    </footer>
 
-    <!--Scripts-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="iniciarSesion.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
 </body>
-
 </html>
+
