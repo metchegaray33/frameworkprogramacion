@@ -3,6 +3,9 @@ $(function() {
     $('[data-toggle="popover"]').popover({
         html : true,
         content : `
+            <div class="container mt-2 d-flex justify-content-end">
+                <button class="btn" id="btnClose"  ><img src="imagenes/borrar.png"/></button>
+            </div>
             <table class = "table">
                 <thead class = "thead-dark">
                     <tr>
@@ -18,6 +21,9 @@ $(function() {
                 </tbody>
             </table>
         `
+    }).click(function(e) {
+        $(this).popover('toggle');
+        e.preventDefault();
     });
 
     $('.table tbody').on('click','#btnVisualizar',()=>{
@@ -26,6 +32,9 @@ $(function() {
             <div class="modal fade md-6 border rounded" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="btn" id="btnClose" data-dismiss="modal"><img src="imagenes/borrar.png"/></button>
+                            </div>
                             <div class="modal-body">
                                 <div class="container row">
                                     <div class="col-md-7">
@@ -45,8 +54,8 @@ $(function() {
         `);
     
        $('#modelId').modal("show");
- 
+        
     });
 
-
+      
 });

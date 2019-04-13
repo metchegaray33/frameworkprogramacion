@@ -34,6 +34,9 @@ $(document).ready(function(){
                 <div class="modal fade md-6 border rounded" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn" id="btnClose" data-dismiss="modal"><img src="imagenes/borrar.png"/></button>
+                                </div>
                                 <div class="modal-body">
                                     <div class="container row">
                                         <div class="col-md-7">
@@ -55,5 +58,7 @@ $(document).ready(function(){
             $('#modelId').modal("show");
 
         });
+
+  
 
 });
