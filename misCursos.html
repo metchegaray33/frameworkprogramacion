@@ -134,13 +134,36 @@
                 <div id="botones" class="container d-flex justify-content-center">
                         <div class="container col-md-6 d-flex justify-content-between">
                         <a href="index.html" class=" btn btn-outline-primary btn-lg ">Volver</a>  
-                        <button type="button" class="btn btn-outline-success btn-lg ">Nuevo Curso</button>
+                        <button type="button" class="btn btn-outline-success btn-lg "  data-toggle="modal" data-target="#modelCurso">Nuevo Curso</button>
                         <button type="button" class="btn btn-outline-secondary btn-lg ">Imprimir</button>
                     </div>
                 </div>
-                   
                 </main>               
     
+                <!--MODAL NUEVO CURSO-->
+
+                <div class="modal fade md-6 border rounded" id="modelCurso" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <form action="" id="formularioNuevaUnidad">
+                                            <div class="input-group">
+                                                  <input type="text" class="form-control" id="unidad" placeholder="Nombre" id="inputUnidad">
+                                            </div>
+                                        </div>
+                                </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-success" id="btnEnviar">Agregar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+    <!--FIN MODAL-->                
+
+
                 <footer class="footer fixed-bottom mt-4">
                     <div class="social">
                         <a href="https://www.facebook.com/Universidad.de.Belgrano/" class="icon-facebook" id="facebook" target="_blank"><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-f.png"></a>
