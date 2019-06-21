@@ -71,65 +71,65 @@
         <div class="container col-md-10">
             <table id="tablaRecursos" class="display table" style="width:100%"></table>
             <!--<table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col" colspan="7">Todos los recursos educativos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="7">Estos son todos los recursos educativos</td>
-                    </tr>
-                </tbody>
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Descripción</th>
-                        <th scope="col">Tipo</th>
-                        <th scope="col">Autor</th>
-                        <th scope="col">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-light" type="button" id="button-addon2">Buscar</button>
-                                </div>
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" colspan="7">Todos los recursos educativos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="7">Estos son todos los recursos educativos</td>
+                </tr>
+            </tbody>
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-light" type="button" id="button-addon2">Buscar</button>
                             </div>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Libro Java</td>
-                        <td>Herramienta</td>
-                        <td>M. Etchegaray</td>
-                        <td class="botonesCursos">
-                            <button type="button" class="btn btn-success btn-sm" id="btnVisualizar">Previsualizar</button>
-                            <button type="button" class="btn btn-warning btn-sm" data-toggle="popover" data-trigger="focus">Ver usos</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Aprender a Programar</td>
-                        <td>Sitio</td>
-                        <td>A. Piccin</td>
-                        <td class="botonesCursos">
-                            <button type="button" class="btn btn-success btn-sm" id="btnVisualizar">Previsualizar</button>
-                            <button type="button" class="btn btn-warning btn-sm" data-toggle="popover" data-trigger="focus">Ver usos</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Inicios programación</td>
-                        <td>Plataforma cerrada</td>
-                        <td>S. Aguilera</td>
-                        <td class="botonesCursos">
-                            <button type="button" class="btn btn-success btn-sm" id="btnVisualizar">Previsualizar</button>
-                            <button type="button" class="btn btn-warning btn-sm" data-toggle="popover" data-trigger="focus">Ver usos</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>-->
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Libro Java</td>
+                    <td>Herramienta</td>
+                    <td>M. Etchegaray</td>
+                    <td class="botonesCursos">
+                        <button type="button" class="btn btn-success btn-sm" id="btnVisualizar">Previsualizar</button>
+                        <button type="button" class="btn btn-warning btn-sm" data-toggle="popover" data-trigger="focus">Ver usos</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Aprender a Programar</td>
+                    <td>Sitio</td>
+                    <td>A. Piccin</td>
+                    <td class="botonesCursos">
+                        <button type="button" class="btn btn-success btn-sm" id="btnVisualizar">Previsualizar</button>
+                        <button type="button" class="btn btn-warning btn-sm" data-toggle="popover" data-trigger="focus">Ver usos</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Inicios programación</td>
+                    <td>Plataforma cerrada</td>
+                    <td>S. Aguilera</td>
+                    <td class="botonesCursos">
+                        <button type="button" class="btn btn-success btn-sm" id="btnVisualizar">Previsualizar</button>
+                        <button type="button" class="btn btn-warning btn-sm" data-toggle="popover" data-trigger="focus">Ver usos</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>-->
         </div>
         <div id="botones" class="container d-flex justify-content-center">
             <div class="container col-md-6 d-flex justify-content-between">
@@ -140,8 +140,8 @@
                 <button type="button" class="btn btn-outline-secondary btn-lg ml-1">Imprimir</button>
             </div>
         </div>
-
-            <div class="modal-dialog modal-dialog-centered" id="dialogPreview" role="document" style="display:none;">
+        <div class="modal fade md-6 border rounded" id="dialogPreview" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true" style="display:none;">
+            <div class="modal-dialog modal-dialog-centered"  role="document" >
                 <div class="modal-content">
                     <div class="modal-header">
                         <button class="btn" id="btnClose" data-dismiss="modal"><img src="imagenes/borrar.png" /></button>
@@ -149,7 +149,7 @@
                     <div class="modal-body">
                         <div class="container row">
                             <div class="col-md-7">
-                                <h3 id="previewRecursosTitulo">Introducción Java</h3>
+                                <h3 id="previewRecursosTitulo"></h3>
                                 <p id="previewRecursosLongDesc" class="justify-content"></p>
                             </div>
                             <div class="col-md-5">
@@ -157,9 +157,10 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-
+        </div>
     </main>
     <footer class="footer fixed-bottom mt-4">
         <div class="social">
