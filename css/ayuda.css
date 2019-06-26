@@ -1,0 +1,26 @@
+.cardAyuda{
+    height: 50px;
+    width: 50px;
+    border: none;
+}
+
+.textoCard{
+    font-size: 22px;
+    margin-left: 12px;
+}
+
+#divAyuda{
+    margin-top: 120px;
+}
+
+h1{
+    font-size: 30px;
+}
+
+#divBusqueda{
+    margin-top: 70px;
+}
+
+#txtContacto{
+    margin-left: 75px;
+}

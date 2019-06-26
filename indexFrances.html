@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="index.css">
+	<script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+		<header>
+				<div class="container-fluid row">
+						<section class="col-md-2 ">
+							<img src="imagenes/universidad.jpg" alt="" class="h-100 w-100">
+						</section>
+						<section class="col-md-6 ">
+							<nav class="navbar justify-content-center navbar-expand-md mt-4">
+								<ul class="nav nav-pills nav-fill">
+									<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>									
+									<li class="nav-item"><a href="#" class="nav-link">Recursos Educativos</a></li>
+									<li class="nav-item"><a href="misCursos.html" class="nav-link">Mis cursos</a></li>
+									<li class="nav-item"><a href="#" class="nav-link">Reportes</a></li>
+									<li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+									<li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
+								</ul>
+							</nav>
+						</section>
+						<section class="col-md-3 container ">
+								<div class="container">
+									<form action="">
+										<div class="input-group mb-2">
+											<input type="text" class="form-control input-sm" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+												<div class="input-group-append">
+													  <button class="btn btn-outline-secondary btn-sm" type="submit">Search</button>
+												</div>
+											</div>
+									</form>
+								
+								</div>
+								<div class="container h-50" id="divBotones">
+									<button class="btn btn-outline-danger btn-rounded mt-1 " id="btnCrearCuenta">Crear cuenta </button>
+									<button class="btn btn-outline-success ml-2 mt-1" id="btnIniciarSesion" data-toggle="modal" data-target="#modelId">Iniciar Sesion</button>	
+								</div>
+						</section>
+						<section class="col-md-1">
+								<a href="index.html"><img src="imagenes/Spain.png" alt="España"></a>
+								<a href="indexIngles.html"><img src="imagenes/United-kingdom.png" alt="Ingles"></a>
+								<a href="indexFrances.html"><img src="imagenes/France.png" alt="Francia"></a>		
+						</section>							
+				</div>
+				
+	
+				
+				<script>
+					$(document).ready(function() {
+						$('#btnEnviar').click(function(e) {
+							$('#divBotones').empty();
+					
+						});
+					});
+					</script>
+	
+	
+				<!--MODAL-->
+					<div class="modal fade md-6 border rounded" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+									<div class="modal-header">
+											<h4 class="modal-title text-justify">Iniciar Sesion</h4>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+									</div>
+									<div class="modal-body">
+										<div class="container">
+											<form action="" id="formulario">
+												<div class="input-group">
+													<div class="input-group-prepend">
+														<div class="input-group-text">@</div>
+													</div>
+													  <input type="email" class="form-control" id="email" placeholder="Email">
+												</div>
+												<div id="resultadoErrorEmail"></div>
+												<div class="input-group mt-4">
+													<div class="input-group-prepend">
+														  <div class="input-group-text">@</div>
+													</div>
+													<input type="password" class="form-control" id="password" placeholder="Password">
+												 </div>
+												 <div id="resultadoErrorPassword"></div>
+										</div>
+									</div>
+							<div class="modal-footer d-flex justify-content-center">
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+								<button type="submit" class="btn btn-success" id="btnEnviar">Iniciar Sesion</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+					
+				<!--Fin Modal-->
+			</header>
+			<hr size="30" width="90%">
+		
+		<main>
+			<div class="container-fluid row">
+					<div class="col-md-7 ml-4 mt-3 mb-3" >
+						<h2>titre 1</h2>
+						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore non alias, quos omnis, culpa velit quisquam eveniet sint quo nesciunt hic laudantium, explicabo. Quisquam eos magnam magni, non natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus amet temporibus recusandae quaerat! Nisi illo eaque voluptatem ipsam. Velit reiciendis beatae delectus architecto alias at hic cupiditate eius eum quos! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ab alias, fugit iusto cupiditate omnis sapiente commodi, possimus eligendi veniam sunt distinctio sint tempore minus maiores ullam itaque fuga natus.</p>
+					</div>
+					<div class="col-md-4">
+						<img src="imagenes/images.png" alt="imagen">
+					</div>
+					<hr size="30" width="90%">
+			</div>
+			<div class="container-fluid row">
+					<div class="col-md-7 ml-4 mt-3 mb-3">
+						<h2>titre 2</h2>
+						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore non alias, quos omnis, culpa velit quisquam eveniet sint quo nesciunt hic laudantium, explicabo. Quisquam eos magnam magni, non natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus amet temporibus recusandae quaerat! Nisi illo eaque voluptatem ipsam. Velit reiciendis beatae delectus architecto alias at hic cupiditate eius eum quos! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ab alias, fugit iusto cupiditate omnis sapiente commodi, possimus eligendi veniam sunt distinctio sint tempore minus maiores ullam itaque fuga natus.</p>
+					</div>
+					<div class="col-md-4">
+						<img src="imagenes/images.png" alt="imagen">
+					</div>
+					<hr size="30" width="90%">
+			</div>
+			<div class="container-fluid row">
+					<div class="col-md-7 ml-4 mt-3 mb-3">
+						<h2>titre 3</h2>
+						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore non alias, quos omnis, culpa velit quisquam eveniet sint quo nesciunt hic laudantium, explicabo. Quisquam eos magnam magni, non natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus amet temporibus recusandae quaerat! Nisi illo eaque voluptatem ipsam. Velit reiciendis beatae delectus architecto alias at hic cupiditate eius eum quos! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ab alias, fugit iusto cupiditate omnis sapiente commodi, possimus eligendi veniam sunt distinctio sint tempore minus maiores ullam itaque fuga natus.</p>
+					</div>
+					<div class="col-md-4">
+						<img src="imagenes/images.png" alt="imagen">
+					</div>
+					<hr size="30" width="90%">
+			</div>
+		</main>
+		<footer></footer>
+
+
+
+	<script src="iniciarSesion.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+</body>
+</html>
+
