@@ -8,6 +8,7 @@ var app = express();
 //cargar archivos rutas
 var usuarios_routes = require('./routes/usuarios')
 var recursos_routes = require('./routes/Recursos')
+var cursos_routes = require('./routes/Cursos')
 
 //middlewares
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -25,6 +26,7 @@ app.use((req, res, next) => {
 //rutas
 app.use('/api', usuarios_routes);
 app.use('/api', recursos_routes);
+app.use('/api', cursos_routes);
 
 //exportar
 module.exports = app;
