@@ -18,7 +18,7 @@ var RecursosSchema = Schema({
     tipo_archivo: String,
     formato_archivo: String,
     path: String,
-    cant_uso: String,
+    cant_uso: Number,
     valoracion_pos: Number,
     valoracion_neg: Number
 });
