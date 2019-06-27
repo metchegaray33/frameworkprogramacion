@@ -9,10 +9,10 @@ var CursosSchema = Schema({
     num_unidades: Number,
     introduccion: String,
     repaso: String,
-    Activo: Boolean,
-
+    activo: Boolean,
+    id_recurso: Number,
     descripcion: String,
 
 });
 
-module.exports = mongoose.model('Recursos', CursosSchema)
+module.exports = mongoose.model('Cursos', CursosSchema)

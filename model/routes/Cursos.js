@@ -13,6 +13,5 @@ router.get('/Curso/:id?', CursosController.getCurso);
 router.get('/Cursos', CursosController.getCursos);
 router.put('/Curso/:id', CursosController.updateCurso);
 router.delete('/Curso/:id', CursosController.deletedCurso);
-router.post('/upload-image/:id', multipartMiddleware, CursosController.uploadImage);
 
 module.exports = router;

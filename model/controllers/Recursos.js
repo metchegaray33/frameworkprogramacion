@@ -8,8 +8,9 @@ var controller = {
     //funcion para guardar recursos a la bd
     saveRecursos: function(req, res) {
         var recurso = new Recurso();
-
         var params = req.body;
+
+        recurso.id = params.id;
         recurso.descripcion = params.descripcion;
         recurso.tipo = params.tipo;
         recurso.autor = params.autor;
