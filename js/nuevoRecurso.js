@@ -1,8 +1,47 @@
 ﻿$(document).ready(function () {
     cargarControles();
-
-
 });
+
+jQuery.validator.setDefaults({
+    debug: true,
+    success: "valid"
+});
+
+
+function validar() {
+    var form = $("#formRecurso");
+    form.validate({
+        rules: {
+            descripcion: {
+                required: true
+            },
+            autor: {
+                required: true
+            },
+            url: {
+                required: true
+            },
+            objetivo: {
+                required: true
+            },
+            estilo: {
+                required: true
+            },
+            aplicabilidad: {
+                required: true
+            },
+            idioma: {
+                required: true
+            },
+            edad: {
+                required: true
+            }
+        }
+    });
+
+    return form.valid();
+}
+
 
 function cargarControles() {
     cargarCombos();
@@ -18,44 +57,38 @@ function cargarCombos() {
 }
 
 function onCrearClick() {
-    var item = getSaveItem();
-
-    //if(validar(item)){
-    guardar(item);
-
-    //}
+    if (validar()) 
+        guardar(getSaveItem());
 }
 
 function guardar(item) {
-    var url = "";
+    var url = "http://localhost:3700/api/save-Recursos";
 
+    ajaxCall(url, JSON.stringify(item), function (response) {
+        alert(response);
 
-
-    //
-    //AjaxCall(url, item, function (response) {
-
-
-    //});
+    },undefined,undefined,"POST");
 }
 
 function getSaveItem() {
-    return {
-        descripcion:    
-        idEstiloAprendizaje: getEstiloAprendizaje(),
-        idAplicabilidad: getAplicabilidad(),
-        idtipo: getTipo()
-
-    };
-
-}
-
-function getEstiloAprendizaje() {
-    return $("#cmbFormato").val();
-}
-function getAplicabilidad() {
-    return $("#cmbFormato").val();
-}
-
-function getFormato() {
-    return $("#cmbFormato").val();
+    return $("#formRecurso").serializeFormJSON();
+    /*return {
+        id: 1,
+        descripcion: "asfddsafdsaf",
+        tipo: "adf",
+        autor: "adf",
+        estilo: "adf",
+        url: "adsf",
+        objetivo: "asdf",
+        aplicabilidad: 1,
+        idioma: "asdf",
+        edad: 1,
+        nombre_archivo: "asdf",
+        tipo_archivo: "asdf",
+        formato_archivo: "adsf",
+        path: "asdf",
+        cant_uso: 1,
+        valoracion_pos: 1,
+        valoracion_neg: 1
+    };*/
 }

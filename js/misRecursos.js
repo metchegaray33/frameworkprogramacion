@@ -2,7 +2,7 @@ $(function () {
     loadData();
     //loadGrid();
 });
-
+/*
 var jsonRecursos = [
     {
         descripcion: "Libro Java", tipo: "Herramienta", autor: "M. Etchegaray", longDescription: "Java es un lenguaje de programación de propósito general, tipado, orientado a objetos, … que permite el desarrollo desde aplicaciones básicas, pasando por aplicaciones empresariales hasta aplicaciones móviles."+
@@ -17,7 +17,7 @@ var jsonRecursos = [
             "Java nacía como un lenguaje de programación que pudiese ser multiplataforma y multidispositivo, bajo el paradigma “Write Once Run Anywhere” (WORA)", imgUrl: "imagenes/java.png",
         usages: "Programación 3", cantUSages: 43}
 ];
-
+*/
 function loadData() {
     ajaxCall("http://localhost:3700/api/Recursos", null, function (response) {
         loadGrid(response.recursos);
@@ -72,40 +72,6 @@ function loadGrid(data) {
         $('#dialogPreview').modal("show");
 
     });
-    /*
-    $('#tablaRecursos tbody').on('click', 'button.btn.btn-warning.btn-sm.seeUsage', function () {
-        
-
-        var data = table.row($(this).parents('tr')).data();
-
-        $('[data-toggle="popover"]').popover({
-            html: true,
-            content: `
-            <div class="container mt-2 d-flex justify-content-end">
-                <button class="btn" id="btnClose"  ><img src="imagenes/borrar.png"/></button>
-            </div>
-            <table class = "table">
-                <thead class = "thead-dark">
-                    <tr>
-                        <th scope = "col">Siendo Usado</th>
-                        <th scope = "col">Frecuencia</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><label class="lableUsages"/></td>
-                        <td><label class="lableCantUsages"/></td>
-                    </tr>
-                </tbody>
-            </table>
-        `
-        });
-        $(".lableUsages").text(data.usages);
-        $(".lableCantUsages").text(data.cantUSages);
-
-        $(this).popover('show');
-        alert(data[0] + "'s usages is: " + data[1]);
-    });*/
 
     $('[data-toggle="popover"]').popover({
         html: true,
@@ -135,10 +101,10 @@ function loadGrid(data) {
         e.preventDefault();
     });
 }
-
+/*
 function reloadGrid() {
     var datatable = $('#tablaRecursos').DataTable();
     datatable.clear().draw();
     datatable.rows.add(jsonRecursos); // Add new data
     datatable.columns.adjust().draw();
-}
+}*/
