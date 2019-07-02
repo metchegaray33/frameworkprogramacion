@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/misCursos.css">
+    <link rel="stylesheet" href="css/imgVisualiarModal.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link href="css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="css/jquery-ui.structure.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -63,7 +69,8 @@
     <hr size="30" width="90%">
     <main>
         <div id="misCursos" class="container col-md-10">
-            <table class="table">
+            <table id="tablaCursos" class="display table" style="width:100%"></table>
+            <!--<table class="table">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col" colspan="4">Mis Cursos</th>
@@ -131,7 +138,7 @@
                         </td>
                     </tr>
                 </tbody>
-            </table>
+            </table>-->
         </div>
         <!--Fin tabla cursos-->
         <div id="botones" class="container d-flex justify-content-center">
@@ -150,15 +157,30 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="container">
-                        <form action="" id="formularioNuevaUnidad">
+                        <form action="" id="formularioNuevoCurso">
                             <div class="input-group">
-                                <input type="text" class="form-control" id="unidad" placeholder="Nombre" id="inputUnidad">
+                                <input type="text" class="form-control" name="nombre_curso" placeholder="Nombre">
                             </div>
+                            <div class="input-group">
+                                <input type="number" class="form-control" name="num_unidades" placeholder="Número de unidades">
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="introduccion" placeholder="Introduccion">
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="repaso" placeholder="Repaso">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" id="cmbRecursos" name="id_recurso"></select>
+                            </div>
+                            <!--<div class="input-group">
+                                <input type="text" class="form-control" name="descripcion" placeholder="Descripcion">
+                            </div>-->
                     </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-success" id="btnEnviar">Agregar</button>
+                    <button type="button" class="btn btn-success" id="btnCrear">Agregar</button>
                     </form>
                 </div>
             </div>
@@ -177,10 +199,18 @@
     </footer>
 
     <!--Scripts-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <script src="js/Helper.js"></script>
+    <script src="js/nuevoCurso.js"></script>
+    <script src="js/misCursos.js"></script>
 
 </body>
 
