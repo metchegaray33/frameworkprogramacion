@@ -49,7 +49,6 @@
 
                 </div>
                 <div class="container h-50" id="divBotones">
-                    <a href="registrarUsuario.html"> <button class="btn btn-outline-danger btn-rounded mt-1 " id="btnCrearCuenta"> Crear cuenta</button></a>
                     <button class="btn btn-outline-success ml-2 mt-1" id="btnIniciarSesion" data-toggle="modal" data-target="#modelId">Iniciar Sesion</button>
                 </div>
             </section>
@@ -115,42 +114,100 @@
     <hr size="30" width="90%">
 
     <main>
-        <div class="container-fluid row">
-            <div class="col-md-7 ml-4 mt-3 mb-3">
-                <h2>Titulo 1</h2>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore non alias, quos omnis, culpa velit quisquam eveniet sint quo nesciunt hic laudantium, explicabo. Quisquam eos magnam magni, non natus! Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Minus amet temporibus recusandae quaerat! Nisi illo eaque voluptatem ipsam. Velit reiciendis beatae delectus architecto alias at hic cupiditate eius eum quos! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Eius ab alias, fugit iusto cupiditate omnis sapiente commodi, possimus eligendi veniam sunt distinctio sint tempore minus maiores ullam itaque fuga natus.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="imagenes/images.png" alt="imagen">
-            </div>
-            <hr size="30" width="90%">
+        <div class="container">
+            <form>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer01">Nombres</label>
+                        <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="" required>
+                        <div class="valid-feedback">
+                            Válidos!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer02">Apellidos</label>
+                        <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" value="" required>
+                        <div class="valid-feedback">
+                            Válidos!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServerUsername">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                            </div>
+                            <input type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="Username" aria-describedby="inputGroupPrepend3" required>
+                            <div class="invalid-feedback">
+                                Por favor, complete el username.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationServer03">DNI</label>
+                        <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="DNI" required>
+                        <div class="invalid-feedback">
+                            Por favor complete su DNI
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationServer04">Matrícula</label>
+                        <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Matrícula" required>
+                        <div class="invalid-feedback">
+                            Por favor complete su matrícula
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cargo</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Alumno</a>
+                                <a class="dropdown-item" href="#">Docente</a>
+                                <div role="separator" class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">No Docente</a>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Correo electrónico">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Confirmar contraseña</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Foto de perfil</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                </form>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+                        <label class="form-check-label" for="invalidCheck3">
+                              Acepto los términos y condiciones
+                            </label>
+                        <div class="invalid-feedback">
+                            Debe aceptar para poder seguir
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Aceptar</button>
+                <a href="index.html"> <button class="btn btn-danger" type="submit">Cancelar</button></a>
+            </form>
         </div>
-        <div class="container-fluid row">
-            <div class="col-md-7 ml-4 mt-3 mb-3">
-                <h2>Titulo 2</h2>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore non alias, quos omnis, culpa velit quisquam eveniet sint quo nesciunt hic laudantium, explicabo. Quisquam eos magnam magni, non natus! Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Minus amet temporibus recusandae quaerat! Nisi illo eaque voluptatem ipsam. Velit reiciendis beatae delectus architecto alias at hic cupiditate eius eum quos! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Eius ab alias, fugit iusto cupiditate omnis sapiente commodi, possimus eligendi veniam sunt distinctio sint tempore minus maiores ullam itaque fuga natus.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="imagenes/images.png" alt="imagen">
-            </div>
-            <hr size="30" width="90%">
         </div>
-        <div class="container-fluid row">
-            <div class="col-md-7 ml-4 mt-3 mb-3">
-                <h2>Titulo 3</h2>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore non alias, quos omnis, culpa velit quisquam eveniet sint quo nesciunt hic laudantium, explicabo. Quisquam eos magnam magni, non natus! Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Minus amet temporibus recusandae quaerat! Nisi illo eaque voluptatem ipsam. Velit reiciendis beatae delectus architecto alias at hic cupiditate eius eum quos! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Eius ab alias, fugit iusto cupiditate omnis sapiente commodi, possimus eligendi veniam sunt distinctio sint tempore minus maiores ullam itaque fuga natus.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="imagenes/images.png" alt="imagen">
-            </div>
-            <hr size="30" width="90%">
-        </div>
+
     </main>
 
     <footer class="footer">
