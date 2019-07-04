@@ -28,8 +28,11 @@ var controller = {
         recurso.valoracion_pos = params.valoracion_pos;
         recurso.valoracion_neg = params.valoracion_neg;
 
+
+
         recurso.save((err, recursoStored) => {
-            if (err) return res.status(500).send({ message: 'Error al guardar' });
+
+            if (err) return res.status(500).send({ error: err });
 
             if (!recursoStored) return res.status(404).sed({ message: 'No se ha podido guardar el curso' });
 

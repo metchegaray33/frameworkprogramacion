@@ -1,3 +1,17 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    position: relative;
+}
+
+main {
+    height: 77.5%;
+    position: relative;
+}
+
 #logo {
     width: 35%;
     height: auto;
@@ -45,6 +59,7 @@
     color: #fff;
     padding: 8px;
     text-align: center;
+    position: relative;
 }
 
 .footer .social [class^="icon-"] {
