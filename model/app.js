@@ -1,5 +1,6 @@
 'use strict'
-var urlSite = "http://localhost:50649";
+//cambiar puerto en cada maquina
+var urlSite = "http://127.0.0.1:5500";
 var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
