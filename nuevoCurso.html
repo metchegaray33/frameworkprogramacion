@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -65,26 +65,20 @@
 
     <main>
         <div class="container" id="containerMarco">
-            <h1>Nuevo Recurso</h1>
+            <h1>Nuevo Curso</h1>
             <br>
             <form id="formRecurso" action="">
-                <div></div>
-                <select class="custom-select">
-                    <option value="" selected>Tipo de Recurso</option>
-                    <option value="1">Texto</option>
-                    <option value="2">Video</option>
-                    <option value="3">Imagen</option>
-                </select>
+
                 <div class="form-group">
                         <br>
-                        <label for="txtTitulo"> Título</label>
+                        <label for="txtTitulo"> Nombre del Curso</label>
                         <input type="text" class="form-control" id="txtTitulo" placeholder="Título">
                     </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1"> Autor</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <label for="exampleFormControlInput1"> Repaso</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Repaso">
                 </div>
-                
+
                 <div class="input-group flex-nowrap">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="txtUrl">URL</span>
@@ -93,51 +87,12 @@
                 </div>
                 <div class="input-group flex-nowrap">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">Objetivo</span>
+                        <span class="input-group-text" id="addon-wrapping">Repaso</span>
                     </div>
                     <input type="text" id="txtObjetivo" class="form-control" name="objetivo" placeholder="Objetivo de la enseñanza" aria-label="Username" aria-describedby="addon-wrapping">
                 </div>
                 <div class="form-group">
-                    <label for="cmbEstilo">Estilo de Aprendizaje</label>
-                    <select class="form-control" id="cmbEstilo" name="estilo">
-                        <option value=""></option>
-                        <option value="1">Activo</option>
-                        <option value="2">Reflexivo</option>
-                        <option value="3">Teorico</option>
-                        <option value="3">Prágmatico</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="cmbAplicabilidad">Aplicabilidad</label>
-                    <select class="form-control" id="cmbAplicabilidad" name="aplicabilidad">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="cmbFormato">Formato de recurso</label>
-                    <select class="form-control" id="cmbFormato" name="">
-                        <option value="">Formato</option>
-                        <option value="Herramienta">Herramienta</option>
-                        <option value="Plataforma Cerrada">Plataforma Cerrada</option>
-                        <option value="Sitio">Sitio</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="cmbIdioma">Idioma</label>
-                    <select class="form-control" id="cmbIdioma" name="idioma">
-                        <option value="">Idioma</option>
-                        <option value="Español">Español</option>
-                        <option value="Ingles">Ingles</option>
-                        <option value="Frances">Frances</option>
-                        <option value="Chino">Chino</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="nbrEdad">Edad</label>
+                    <label for="nbrEdad">Número de Unidades</label>
                     <input type="number" id="nbrEdad">
                 </div>
                 <div class="form-group">
@@ -146,7 +101,7 @@
                 </div>
 
                 <div class="container" id="botones">
-                    <a href="misRecursos.html">
+                    <a href="misCursos.html">
                         <button type="button" class="btn btn-primary btn-lg">Volver</button>
                     </a>
                     <button type="button" class="btn btn-success btn-lg" id="btnCrear">Crear</button>

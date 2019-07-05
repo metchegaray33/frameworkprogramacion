@@ -27,6 +27,9 @@ var controller = {
         usuario.dni = params.dni;
         usuario.matricula = params.matricula;
         usuario.cargo = params.cargo;
+        usuario.username = params.username;
+        usuario.email = params.email;
+        usuario.password = params.password;
         usuario.imagen = null;
 
         usuario.save((err, usuarioStored) => {

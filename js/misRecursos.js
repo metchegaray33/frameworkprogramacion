@@ -48,19 +48,21 @@ function loadGrid(data) {
     var table = $('#tablaRecursos').DataTable({
         data: data /*jsonRecursos*/,
         columns: [
-            { title: "Descripción", data: "descripcion" },
+            { title: "Titulo", data: "titulo" },
             { title: "Tipo", data: "tipo" },
             { title: "Autor", data: "autor" },
             
             { title: "buttons", data: "button" },
-            { title: "usages", data: "usages", visible: false },
-            { title: "cantUSages", data: "cantUSages", visible: false }
+            // { title: "usages", data: "usages", visible: false },
+            // { title: "cantUSages", data: "cantUSages", visible: false },
+            { title: "Descripción", data: "descripcion", visible: false }
         ],
         "columnDefs": [{
-            "targets": 3,
+            "targets": 5,
             "data": null,
             "defaultContent": "<button type='button' class= 'btn btn - success btn-sm preview' >Previsualizar</button>"+
-                "<button type='button' class= 'btn btn-warning btn-sm seeUsage' data-toggle='popover' data-trigger='hover'> Ver usos</button>"
+                "<button type='button' class= 'btn btn-warning btn-sm seeUsage' data-toggle='popover' data-trigger='hover'> Ver usos</button>"+
+                "<a href='admRecursos.html'><button type='button' class='btn btn-success ml-1 btn-sm'>Adm Recursos</button></a>"
         }]
     });
 
@@ -88,8 +90,8 @@ function loadGrid(data) {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><label class="lableUsages"/></td>
-                        <td><label class="lableCantUsages"/></td>
+                        <td><label class="lableUsages"/>Programacion</td>
+                        <td><label class="lableCantUsages"/>3</td>
                     </tr>
                 </tbody>
             </table>
