@@ -53,12 +53,12 @@ function loadGrid(data) {
             { title: "Autor", data: "autor" },
             
             { title: "buttons", data: "button" },
-            { title: "usages", data: "usages", visible: false },
-            { title: "cantUSages", data: "cantUSages", visible: false },
+            // { title: "usages", data: "usages", visible: false },
+            // { title: "cantUSages", data: "cantUSages", visible: false },
             { title: "Descripción", data: "descripcion", visible: false }
         ],
         "columnDefs": [{
-            "targets": 7,
+            "targets": 5,
             "data": null,
             "defaultContent": "<button type='button' class= 'btn btn - success btn-sm preview' >Previsualizar</button>"+
                 "<button type='button' class= 'btn btn-warning btn-sm seeUsage' data-toggle='popover' data-trigger='hover'> Ver usos</button>"
