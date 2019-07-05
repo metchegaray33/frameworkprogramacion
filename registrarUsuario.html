@@ -88,7 +88,7 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">@</div>
                                     </div>
-                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                    <input type="email" class="form-control" id="email" placeholder="Email" >
                                 </div>
                                 <div id="resultadoErrorEmail"></div>
                                 <div class="input-group mt-4">
@@ -119,14 +119,14 @@
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
                         <label for="validationServer01">Nombres</label>
-                        <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="" required>
+                        <input type="text" class="form-control is-valid" id="validationServer01" name="nombre" placeholder="First name" value="" required>
                         <div class="valid-feedback">
                             Válidos!
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="validationServer02">Apellidos</label>
-                        <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" value="" required>
+                        <input type="text" class="form-control is-valid" id="validationServer02" name="apellido" placeholder="Last name" value="" required>
                         <div class="valid-feedback">
                             Válidos!
                         </div>
@@ -147,21 +147,21 @@
                 <div class="form-row">
                     <div class="col-md-3 mb-3">
                         <label for="validationServer03">DNI</label>
-                        <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="DNI" required>
+                        <input type="text" class="form-control is-invalid" id="validationServer03" name="dni" placeholder="DNI" required>
                         <div class="invalid-feedback">
                             Por favor complete su DNI
                         </div>
                     </div>
                     <div class="col-md-3 mb-3">
                         <label for="validationServer04">Matrícula</label>
-                        <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Matrícula" required>
+                        <input type="text" class="form-control is-invalid" id="validationServer04" name="matricula" placeholder="Matrícula" required>
                         <div class="invalid-feedback">
                             Por favor complete su matrícula
                         </div>
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cargo</button>
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" name="cargo" aria-haspopup="true" aria-expanded="false">Cargo</button>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Alumno</a>
                                 <a class="dropdown-item" href="#">Docente</a>
