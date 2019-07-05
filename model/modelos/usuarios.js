@@ -10,7 +10,10 @@ var UsuarioSchema = Schema({
     dni : Number,
     matricula : Number,
     cargo : String,
-    imagen : String
+    imagen : String,
+    username: String,
+    email: String,
+    password: String
 });
 
 module.exports = mongoose.model('Usuarios', UsuarioSchema )
