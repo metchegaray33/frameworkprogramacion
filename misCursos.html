@@ -157,31 +157,38 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="container">
-                        <form action="" id="formularioNuevoCurso">
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="nombre_curso" placeholder="Nombre">
+                        <form action="" id="formularioNuevoCurso" class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" name="nombre_curso" placeholder="Nombre">
+                                </div>
                             </div>
-                            <div class="input-group">
-                                <input type="number" class="form-control" name="num_unidades" placeholder="Número de unidades">
+                            <div class="row">
+                                    <input type="number" class="form-control" name="num_unidades" placeholder="Número de unidades">
+                                </div>
                             </div>
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="introduccion" placeholder="Introduccion">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" name="introduccion" placeholder="Introduccion">
+                                </div>
                             </div>
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="repaso" placeholder="Repaso">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" name="repaso" placeholder="Repaso">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <select class="form-control" id="cmbRecursos" name="id_recurso"></select>
+                            <div class="row">
+                                <div class="col">
+                                    <select class="form-control" id="cmbRecursos" name="id_recurso"></select>
+                                </div>
                             </div>
-                            <!--<div class="input-group">
-                                <input type="text" class="form-control" name="descripcion" placeholder="Descripcion">
-                            </div>-->
+                        </form>
                     </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                     <button type="button" class="btn btn-success" id="btnCrear">Agregar</button>
-                    </form>
+                    
                 </div>
             </div>
         </div>
