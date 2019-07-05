@@ -61,7 +61,8 @@ function loadGrid(data) {
             "targets": 5,
             "data": null,
             "defaultContent": "<button type='button' class= 'btn btn - success btn-sm preview' >Previsualizar</button>"+
-                "<button type='button' class= 'btn btn-warning btn-sm seeUsage' data-toggle='popover' data-trigger='hover'> Ver usos</button>"
+                "<button type='button' class= 'btn btn-warning btn-sm seeUsage' data-toggle='popover' data-trigger='hover'> Ver usos</button>"+
+                "<a href='admRecursos.html'><button type='button' class='btn btn-success ml-1 btn-sm'>Adm Recursos</button></a>"
         }]
     });
 
