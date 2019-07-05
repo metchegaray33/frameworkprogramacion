@@ -76,7 +76,7 @@ function guardar(item) {
 
     ajaxCall(url, JSON.stringify(item), function (response) {
         alert(response);
-
+        loadData();
     },undefined,undefined,"POST");
 }
 
