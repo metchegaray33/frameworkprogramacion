@@ -67,24 +67,36 @@
         <div class="container" id="containerMarco">
             <h1>Nuevo Recurso</h1>
             <br>
-            <form id="formRecurso" action="">
-                <div></div>
-                <select class="custom-select">
+            <form id="formRecurso" class="needs-validation" novalidate>
+
+                <!--   <select class="custom-select">
                     <option value="" selected>Tipo de Recurso</option>
                     <option value="1">Texto</option>
                     <option value="2">Video</option>
                     <option value="3">Imagen</option>
-                </select>
-                <div class="form-group">
-                        <br>
-                        <label for="txtTitulo"> Título</label>
-                        <input type="text" class="form-control" id="txtTitulo" placeholder="Título">
+                </select> -->
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <select class="form-control" id="exampleFormControlSelect1" name="tipo">
+                                <option value=""selected>Tipo de Recurso</option>
+                                <option value="Texto">Texto</option>
+                                <option value="Video">Video</option>
+                                <option value="Imagen">Imagen</option>
+                        </select>
                     </div>
+                </div>
+
+                <div class="form-group">
+                    <br>
+                    <label for="txtTitulo"> Título</label>
+                    <input type="text" name="titulo" class="form-control" id="txtTitulo" placeholder="Título">
+                </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1"> Autor</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <input type="text" name="autor" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                 </div>
-                
+
                 <div class="input-group flex-nowrap">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="txtUrl">URL</span>
@@ -119,7 +131,7 @@
                 </div>
                 <div class="form-group">
                     <label for="cmbFormato">Formato de recurso</label>
-                    <select class="form-control" id="cmbFormato" name="">
+                    <select class="form-control" id="cmbFormato" name="formato">
                         <option value="">Formato</option>
                         <option value="Herramienta">Herramienta</option>
                         <option value="Plataforma Cerrada">Plataforma Cerrada</option>
@@ -138,11 +150,11 @@
                 </div>
                 <div class="form-group">
                     <label for="nbrEdad">Edad</label>
-                    <input type="number" id="nbrEdad">
+                    <input type="number" id="nbrEdad" name="edad">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Descripción</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="descripcion"></textarea>
                 </div>
 
                 <div class="container" id="botones">

@@ -11,6 +11,7 @@ var controller = {
         var params = req.body;
 
         recurso.id = params.id;
+        recurso.titulo = params.titulo;
         recurso.descripcion = params.descripcion;
         recurso.tipo = params.tipo;
         recurso.autor = params.autor;
@@ -18,6 +19,7 @@ var controller = {
         recurso.url = params.url;
         recurso.objetivo = params.objetivo;
         recurso.aplicabilidad = params.aplicabilidad;
+        recurso.formato = params.formato;
         recurso.idioma = params.idioma;
         recurso.edad = params.edad;
         recurso.nombre_archivo = null;

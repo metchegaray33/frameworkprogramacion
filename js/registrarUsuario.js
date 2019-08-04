@@ -15,10 +15,10 @@
 //       });
 //     }, false);
 //   })();
-$(document).ready(function () {
+$(document).ready(function() {
     cargarControles();
 });
- 
+
 // jQuery.validator.setDefaults({
 //     debug: true,
 //     success: "valid"
@@ -75,25 +75,25 @@ function cargarCombos() {
 
 function onCrearClick() {
     //if (validar()) 
-        guardar(getSaveItem());
+    guardar(getSaveItem());
 }
 
 function guardar(item) {
     var url = "http://localhost:3700/api/save-Usuarios";
 
-    ajaxCall(url, JSON.stringify(item), function (response) {
+    ajaxCall(url, JSON.stringify(item), function(response) {
         try {
             var us = response.usuario;
-            if(us._id != undefined)
+            if (us._id != undefined)
                 alert("Se creo el usuario " + us.username);
 
         } catch (error) {
             alert("Ups! hubo un error! " + error)
         }
-        
-        
 
-    },undefined,undefined,"POST");
+
+
+    }, undefined, undefined, "POST");
 }
 
 function getSaveItem() {

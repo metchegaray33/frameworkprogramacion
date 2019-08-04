@@ -1,4 +1,6 @@
-$(function () {
+var tableId = "tablaRecursos";
+
+$(function() {
     loadData();
     //loadGrid();
 });
@@ -19,9 +21,9 @@ var jsonRecursos = [
 ];
 */
 function loadData() {
-    ajaxCall("http://localhost:3700/api/Recursos", null, function (response) {
+    ajaxCall("http://localhost:3700/api/Recursos", null, function(response) {
         loadGrid(response.recursos);
-    },undefined,undefined,"GET");
+    }, undefined, undefined, "GET");
 }
 
 function populatePreviewRecursos(data) {
@@ -39,37 +41,40 @@ function setPreviewRecursosLongDesc(value) {
 }
 
 function setPreviewRecursosImg(url) {
-    $("#previewRecursosLongDesc").attr("src",url);
+    $("#previewRecursosLongDesc").attr("src", url);
 }
 
+function generateGridButtons() {
+    return "<button type='button' class= 'btn btn - success btn-sm preview' >Previsualizar</button>" +
+        "<button type='button' class= 'btn btn-warning btn-sm seeUsage' data-toggle='popover' data-trigger='hover'> Ver usos</button>" +
+        "<a href='admRecursos.html'><button type='button' class='btn btn-success ml-1 btn-sm'>Adm Recursos</button></a>";
+}
 
 function loadGrid(data) {
 
-    var table = $('#tablaRecursos').DataTable({
-        data: data /*jsonRecursos*/,
+    var table = $('#' + tableId).DataTable({
+        data: data /*jsonRecursos*/ ,
         columns: [
-            { title: "Titulo", data: "titulo" },
+            { title: "Título", data: "titulo" },
             { title: "Tipo", data: "tipo" },
             { title: "Autor", data: "autor" },
-            
-            { title: "buttons", data: "button" },
+            { title: "Descripción", data: "descripcion", visible: true }
+            //{ title: "buttons", data: "button" }
             // { title: "usages", data: "usages", visible: false },
             // { title: "cantUSages", data: "cantUSages", visible: false },
-            { title: "Descripción", data: "descripcion", visible: false }
+
         ],
         "columnDefs": [{
-            "targets": 5,
+            "targets": 4,
             "data": null,
-            "defaultContent": "<button type='button' class= 'btn btn - success btn-sm preview' >Previsualizar</button>"+
-                "<button type='button' class= 'btn btn-warning btn-sm seeUsage' data-toggle='popover' data-trigger='hover'> Ver usos</button>"+
-                "<a href='admRecursos.html'><button type='button' class='btn btn-success ml-1 btn-sm'>Adm Recursos</button></a>"
+            "defaultContent": generateGridButtons()
         }]
     });
 
     $("#tablaRecursos thead").addClass("thead-dark");
 
-    $('#tablaRecursos tbody').on('click', 'button.btn.btn.-.success.btn-sm.preview', function () {
-        var data = table.row($(this).parents('tr')).data();        
+    $('#tablaRecursos tbody').on('click', 'button.btn.btn.-.success.btn-sm.preview', function() {
+        var data = table.row($(this).parents('tr')).data();
         populatePreviewRecursos(data);
         $('#dialogPreview').modal("show");
 
@@ -96,7 +101,7 @@ function loadGrid(data) {
                 </tbody>
             </table>
         `
-    }).hover(function (e) { 
+    }).hover(function(e) {
         var data = table.row($(this).parents('tr')).data();
         $(".lableUsages").text(data.usages);
         $(".lableCantUsages").text(data.cantUSages);

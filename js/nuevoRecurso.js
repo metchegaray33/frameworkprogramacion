@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+﻿$(document).ready(function() {
     cargarControles();
 });
 
@@ -8,10 +8,13 @@ jQuery.validator.setDefaults({
 });
 
 
-function validar() {
+/* function validar() {
     var form = $("#formRecurso");
     form.validate({
         rules: {
+            titulo: {
+                required: true
+            },
             descripcion: {
                 required: true
             },
@@ -40,7 +43,7 @@ function validar() {
     });
 
     return form.valid();
-}
+} */
 
 
 function cargarControles() {
@@ -57,17 +60,24 @@ function cargarCombos() {
 }
 
 function onCrearClick() {
-    if (validar()) 
-        guardar(getSaveItem());
+    //if (validar())
+    guardar(getSaveItem());
 }
 
 function guardar(item) {
     var url = "http://localhost:3700/api/save-Recursos";
 
-    ajaxCall(url, JSON.stringify(item), function (response) {
-        alert(response);
+    ajaxCall(url, JSON.stringify(item), function(response) {
+        try {
+            var us = response.recurso;
+            if (us._id != undefined)
+                alert("Se creo el Recurso " + us.titulo);
+        } catch (error) {
+            alert("Ups! hubo un error! " + error)
+        }
 
-    },undefined,undefined,"POST");
+
+    }, undefined, undefined, "POST");
 }
 
 function getSaveItem() {

@@ -5,6 +5,7 @@ var Schema = mongoose.Schema;
 
 var RecursosSchema = Schema({
     id: Number,
+    titulo: String,
     descripcion: String,
     tipo: String,
     autor: String,
