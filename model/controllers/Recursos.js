@@ -1,4 +1,4 @@
-'use strict'
+ 'use strict'
 
 var Recurso = require('../modelos/Recursos');
 var fs = require('fs');

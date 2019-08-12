@@ -12,6 +12,7 @@ app.use(cors({
 var usuarios_routes = require('./routes/usuarios')
 var recursos_routes = require('./routes/Recursos')
 var cursos_routes = require('./routes/Cursos')
+var unidades_routes = require('./routes/Unidades')
 
 //middlewares
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -37,6 +38,7 @@ app.use(bodyParser.json());
 app.use('/api', usuarios_routes);
 app.use('/api', recursos_routes);
 app.use('/api', cursos_routes);
+app.use('/api', unidades_routes);
 
 //exportar
 module.exports = app;
