@@ -27,13 +27,13 @@ function loadGrid(data) {
         columns: [
             { title: "Cursos", data: "nombre_curso" },
             { title: "Número de unidades", data: "num_unidades" },
-            { title: "introduccion", data: "introduccion", visible: false },
-            { title: "repaso", data: "repaso", visible: false },
-            { title: "activo", data: "activo", visible: false },
-            { title: "id_recurso", data: "id_recurso", visible: false }  
+            //{ title: "introduccion", data: "introduccion", visible: false },
+            //{ title: "repaso", data: "repaso", visible: false },
+            //{ title: "activo", data: "activo", visible: false },
+            //{ title: "id_recurso", data: "id_recurso", visible: false }  
         ],
         "columnDefs": [{
-            "targets": 6,
+            "targets": 2,
             "data": null,
             "defaultContent": generateGridButtons()
         }]

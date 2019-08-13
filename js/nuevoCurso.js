@@ -75,8 +75,16 @@ function guardar(item) {
     var url = "http://localhost:3700/api/save-Cursos";
 
     ajaxCall(url, JSON.stringify(item), function (response) {
-        alert(response);
-        loadData();
+        
+        try {
+            let us = response.curso;
+            if (us._id !== undefined)
+                alert("Se creó el curso: " + us.nombre_curso);
+        } catch (error) {
+            alert("Ups! hubo un error! " + error)
+        }
+        
+        //loadData();
     },undefined,undefined,"POST");
 }
 
