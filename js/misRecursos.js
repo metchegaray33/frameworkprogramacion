@@ -47,7 +47,13 @@ function setPreviewRecursosImg(url) {
 function generateGridButtons() {
     return "<button type='button' class= 'btn btn - success btn-sm preview' >Previsualizar</button>" +
         "<button type='button' class= 'btn btn-warning btn-sm seeUsage' data-toggle='popover' data-trigger='hover'> Ver usos</button>" +
-        "<a href='admRecursos.html'><button type='button' class='btn btn-success ml-1 btn-sm'>Adm Recursos</button></a>";
+        "<a href='admRecursos.html'><button type='button' class='btn btn-success ml-1 btn-sm'>Adm Recursos</button></a>"+
+        "<div class='container'>"+
+            "<nav class='navbar navbar-expand-lg navbar-light bg-light'>"+
+                "<a class='navbar-brand' href='#'>Navbar</a>"+
+            "</nav"+
+        "</div>"
+        
 }
 
 function loadGrid(data) {
@@ -77,7 +83,11 @@ function loadGrid(data) {
         var data = table.row($(this).parents('tr')).data();
         populatePreviewRecursos(data);
         $('#dialogPreview').modal("show");
+        
+    });
 
+    $('#tablaRecursos tbody').on('click', 'button.btn.btn-danger.ml-1.btn-sm', function() {
+        $(this).closest('tr').remove();   
     });
 
     $('[data-toggle="popover"]').popover({

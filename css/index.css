@@ -11,7 +11,7 @@ img{
   margin:0 auto;
 }
 
-a{
+a:hover{
 	color: black;
 	text-decoration: none;
 }
@@ -59,13 +59,16 @@ a{
 }
 
 #logOut{
-    height: 31px;
-    width: 59px;
-    font-size: 10px;
+    height: 40px;
+    width: 100px;
+    font-size: 1em;
+    text-align: center;
     margin-left: 13px;
 }
 
 #btnClose{
     border: none;
 }
+
+
 

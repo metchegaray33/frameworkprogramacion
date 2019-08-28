@@ -27,7 +27,9 @@ function setPreviewUnidadesDescripcion(value) {
 function generateGridButtons() {
     return "<button type='button' class= 'btn btn - success btn-sm preview' >Previsualizar</button>" +
         "<button type='button' class= 'btn btn-warning btn-sm seeUsage' data-toggle='popover' data-trigger='hover'> Ver usos</button>" +
-        "<a href='admRecursos.html'><button type='button' class='btn btn-success ml-1 btn-sm'>Adm Recursos</button></a>";
+        "<a href='admRecursos.html'><button type='button' class='btn btn-success ml-1 btn-sm'>Adm Recursos</button></a>"+
+        "<button type='button' class='btn btn-danger ml-1 btn-sm'>Borrar</button>"+
+        "<button type='button' class='btn btn-success ml-1 btn-sm'> Asociar </button></a>";
 }
 
 function loadGrid(data) {
@@ -51,6 +53,10 @@ function loadGrid(data) {
         populatePreviewUnidades(data);
         $('#dialogPreview').modal("show");
 
+    });
+
+    $('#tablaUnidades tbody').on('click', 'button.btn.btn-danger.ml-1.btn-sm', function() {
+        $(this).closest('tr').remove();   
     });
 
     $('[data-toggle="popover"]').popover({

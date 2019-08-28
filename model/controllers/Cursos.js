@@ -18,6 +18,7 @@ var controller = {
         curso.activo = params.activo;
         curso.id_recurso = params.id_recurso;
         curso.descripcion = params.descripcion;
+        curso.fecha_creacion = params.fecha_creacion;
 
         curso.save((err, cursoStored) => {
             if (err) return res.status(500).send({ message: 'Error al guardar' });

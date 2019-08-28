@@ -28,7 +28,17 @@ function validar() {
             },
             id_recurso: {
                 required: true
+            },
+            fecha_creacion: {
+                required: true
+            },
+            descripcion: {
+                required: true
+            },
+            activo: {
+                required: true
             }
+
         }
     });
 
@@ -44,6 +54,8 @@ function cargarControles() {
 function setBtnCrearOnCliclEvent() {
     $("#btnCrear").on("click", onCrearClick);
 }
+
+
 
 function cargarCombos() {
     cargarComboRecursos();

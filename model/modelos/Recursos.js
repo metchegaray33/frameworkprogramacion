@@ -8,20 +8,11 @@ var RecursosSchema = Schema({
     titulo: String,
     descripcion: String,
     tipo: String,
-    autor: String,
-    estilo: String,
     url: String,
     objetivo: String,
     aplicabilidad: Number,
     idioma: String,
-    edad: Number,
-    nombre_archivo: String,
-    tipo_archivo: String,
-    formato_archivo: String,
-    path: String,
-    cant_uso: Number,
-    valoracion_pos: Number,
-    valoracion_neg: Number
+    cant_uso: Number
 });
 
 module.exports = mongoose.model('Recursos', RecursosSchema)

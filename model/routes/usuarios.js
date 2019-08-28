@@ -15,6 +15,6 @@ router.get('/usuario/:id?', usuariosController.getUsuario);
 router.get('/usuarios', usuariosController.getUsuarios);
 router.put('/usuario/:id', usuariosController.updateUsuario);
 router.delete('/usuario/:id', usuariosController.deletedUsuario);
-router.post('/upload-image/:id', multipartMiddleware, usuariosController.uploadImage);
+//router.post('/upload-image/:id', multipartMiddleware, usuariosController.uploadImage);
 
 module.exports = router;

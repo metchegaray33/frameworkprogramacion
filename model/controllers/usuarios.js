@@ -30,7 +30,7 @@ var controller = {
         usuario.username = params.username;
         usuario.email = params.email;
         usuario.password = params.password;
-        usuario.imagen = null;
+
 
         usuario.save((err, usuarioStored) => {
             if (err) return res.status(500).send({ message: 'Error al guardar' });
@@ -96,44 +96,8 @@ var controller = {
                 usuario: usuarioDeleted
             });
         });
-    },
-
-    //Funcion para subir imagenes
-    uploadImage: function(req, res) {
-        var usuarioId = req.params.id;
-        var fileName = 'imagen no subida...';
-
-        if (req.files) {
-            var filepath = req.files.imagen.path;
-            var fileSplit = filepath.split('\\');
-            var fileName = fileSplit[1];
-            var extSplit = fileName.split('\.');
-            var fileExt = extSplit[1];
-
-            if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif') {
-                Usuario.findByIdAndUpdate(usuarioId, { imagen: fileName }, { new: true }, (err, usuarioUpdate) => {
-                    if (err) return res.status(500).send({ message: 'Error al subir imagen' });
-
-                    if (!usuarioUpdate) return res.status(404).send({ message: 'No se ha podido subir la imagen' });
-
-                    return res.status(200).send({
-                        usuario: usuarioUpdate
-                    });
-                });
-            } else {
-                fs.unlink(filepath, (err) => {
-                    return res.status(200).send({ message: 'la extension no es valida' });
-                });
-            }
-
-
-
-        } else {
-            return res.status(200).send({
-                message: fileName
-            });
-        }
     }
+    
 }
 
 module.exports = controller;

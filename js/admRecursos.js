@@ -1,6 +1,8 @@
-$().ready(function(){
+$().ready(function (){
+    
     $('.table tbody').on('click','#borrar',function(){
         $(this).closest('tr').remove();
+
     });
 
     $('.table tbody').on('click','#btnVisualizar',function(){
@@ -41,3 +43,4 @@ $().ready(function(){
     });
 
 });
+   

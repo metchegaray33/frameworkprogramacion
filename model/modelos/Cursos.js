@@ -12,7 +12,7 @@ var CursosSchema = Schema({
     activo: Boolean,
     id_recurso: Number,
     descripcion: String,
-
+    fecha_creacion: Date
 });
 
 module.exports = mongoose.model('Cursos', CursosSchema)

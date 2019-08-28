@@ -1,5 +1,6 @@
 ﻿var tableId = "tablaCursos";
 
+
 $(function () {
     loadData();
 });
@@ -41,4 +42,14 @@ function loadGrid(data) {
 
     $("#" + tableId + " thead").addClass("thead-dark");
     
+    $('#tablaCursos tbody').on('click', 'button.btn.btn-danger.ml-1.btn-sm', function() {
+        $(this).closest('tr').remove();   
+    });
+
+    $('#tablaCursos tbody').on('click', 'button.btn.btn-warning.ml-1.btn-sm ', function() {
+        url = "modificarCursos.html";
+        $(location).attr("href", url);
+    });
+
+
 }

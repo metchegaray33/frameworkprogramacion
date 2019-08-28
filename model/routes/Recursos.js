@@ -13,6 +13,6 @@ router.get('/Recurso/:id?', RecursosController.getRecurso);
 router.get('/Recursos', RecursosController.getRecursos);
 router.put('/Recurso/:id', RecursosController.updateRecurso);
 router.delete('/Recurso/:id', RecursosController.deletedRecurso);
-router.post('/upload-image/:id', multipartMiddleware, RecursosController.uploadImage);
+//router.post('/upload-image/:id', multipartMiddleware, RecursosController.uploadImage);
 
 module.exports = router;

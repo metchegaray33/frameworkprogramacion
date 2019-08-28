@@ -14,21 +14,16 @@ var controller = {
         recurso.titulo = params.titulo;
         recurso.descripcion = params.descripcion;
         recurso.tipo = params.tipo;
-        recurso.autor = params.autor;
-        recurso.estilo = params.estilo;
+     
         recurso.url = params.url;
         recurso.objetivo = params.objetivo;
         recurso.aplicabilidad = params.aplicabilidad;
-        recurso.formato = params.formato;
+
         recurso.idioma = params.idioma;
-        recurso.edad = params.edad;
-        recurso.nombre_archivo = null;
-        recurso.tipo_archivo = null;
-        recurso.formato_archivo = null;
-        recurso.path = null;
+  
+      
         recurso.cant_uso = params.cant_uso;
-        recurso.valoracion_pos = params.valoracion_pos;
-        recurso.valoracion_neg = params.valoracion_neg;
+
 
 
 
@@ -99,39 +94,7 @@ var controller = {
         });
     },
 
-    //Funcion para subir imagenes
-    uploadImage: function(req, res) {
-        var recursoId = req.params.id;
-        var fileName = 'imagen no subida...';
 
-        if (req.files) {
-            var filepath = req.files.imagen.path;
-            var fileSplit = filepath.split('\\');
-            var fileName = fileSplit[1];
-            var extSplit = fileName.split('\.');
-            var fileExt = extSplit[1];
-
-            if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif') {
-                Recurso.findByIdAndUpdate(recursoId, { nombre_archivo: fileName, path: filepath, tipo_archivo: fileExt }, { new: true }, (err, recursoUpdate) => {
-                    if (err) return res.status(500).send({ message: 'Error al subir imagen' });
-
-                    if (!recursoUpdate) return res.status(404).send({ message: 'No se ha podido subir la imagen' });
-
-                    return res.status(200).send({
-                        recurso: recursoUpdate
-                    });
-                });
-            } else {
-                fs.unlink(filepath, (err) => {
-                    return res.status(200).send({ message: 'la extensión no es valida' });
-                });
-            }
-        } else {
-            return res.status(200).send({
-                message: fileName
-            });
-        }
-    }
 }
 
 module.exports = controller;
