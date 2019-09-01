@@ -1,26 +1,15 @@
 'use strict'
 
 var Usuario = require('../modelos/usuarios');
+var Archivo = require('../modelos/Archivos');
 var fs = require('fs');
 
 var controller = {
 
-    home: function(req, res) {
-        return res.status(200).send({
-            message: 'soy la home'
-        });
-    },
-
-    test: function(req, res) {
-        return res.status(200).send({
-            message: "Soy el metodo test"
-        });
-    },
-
     //funcion para guardar usuarios a la bd
     saveUsuarios: function(req, res) {
         var usuario = new Usuario();
-
+        console.log(req.body);
         var params = req.body;
         usuario.nombre = params.nombre;
         usuario.apellido = params.apellido;
@@ -30,7 +19,7 @@ var controller = {
         usuario.username = params.username;
         usuario.email = params.email;
         usuario.password = params.password;
-        usuario.imagen = null;
+        usuario.id_archivo = null;
 
         usuario.save((err, usuarioStored) => {
             if (err) return res.status(500).send({ message: 'Error al guardar' });
@@ -100,34 +89,43 @@ var controller = {
 
     //Funcion para subir imagenes
     uploadImage: function(req, res) {
+        var archivo = new Archivo();
         var usuarioId = req.params.id;
         var fileName = 'imagen no subida...';
 
         if (req.files) {
-            var filepath = req.files.imagen.path;
-            var fileSplit = filepath.split('\\');
-            var fileName = fileSplit[1];
-            var extSplit = fileName.split('\.');
+            //console.log(req.files)
+            //req.files.null --- hay que cambiar eso, aún no encontré porque cambia de nombre dependiendo de donde se lo llama. el nombre es arbitrario
+            var filePath = req.files.null.path;
+            var fileName = req.files.null.name;
+            var extSplit = fileName.split('.');
             var fileExt = extSplit[1];
 
-            if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif') {
-                Usuario.findByIdAndUpdate(usuarioId, { imagen: fileName }, { new: true }, (err, usuarioUpdate) => {
+            archivo.nombre_archivo = fileName;
+            archivo.tipo_archivo = fileExt;
+            archivo.path = filePath;
+
+            if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg') {
+
+                archivo.save((err, archivoStored) => {
                     if (err) return res.status(500).send({ message: 'Error al subir imagen' });
 
-                    if (!usuarioUpdate) return res.status(404).send({ message: 'No se ha podido subir la imagen' });
+                    if (!archivoStored) return res.status(404).send({ message: 'No se ha podido subir la imagen' });
 
-                    return res.status(200).send({
-                        usuario: usuarioUpdate
+                    Usuario.findByIdAndUpdate(usuarioId, { id_archivo: archivoStored._id }, { new: true }, (err, usuarioUpdate) => {
+
+                        return res.status(200).send({
+                            usuario: usuarioUpdate
+                        });
                     });
                 });
+
+
             } else {
                 fs.unlink(filepath, (err) => {
                     return res.status(200).send({ message: 'la extension no es valida' });
                 });
             }
-
-
-
         } else {
             return res.status(200).send({
                 message: fileName

@@ -8,8 +8,6 @@ var router = express.Router();
 var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart({ uploadDir: './uploads' });
 
-router.get('/home', usuariosController.home);
-router.post('/test', usuariosController.test);
 router.post('/save-usuarios', usuariosController.saveUsuarios);
 router.get('/usuario/:id?', usuariosController.getUsuario);
 router.get('/usuarios', usuariosController.getUsuarios);

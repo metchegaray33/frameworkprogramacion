@@ -13,6 +13,7 @@ var usuarios_routes = require('./routes/usuarios')
 var recursos_routes = require('./routes/Recursos')
 var cursos_routes = require('./routes/Cursos')
 var unidades_routes = require('./routes/Unidades')
+var archivos_routes = require('./routes/Archivos')
 
 //middlewares
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -39,6 +40,7 @@ app.use('/api', usuarios_routes);
 app.use('/api', recursos_routes);
 app.use('/api', cursos_routes);
 app.use('/api', unidades_routes);
+app.use('/api', archivos_routes);
 
 //exportar
 module.exports = app;
