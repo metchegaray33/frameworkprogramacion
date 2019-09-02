@@ -10,7 +10,7 @@ var controller = {
         var archivo = new Archivo();
         var fileName = 'Imagen no subida';
         if (req.files) {
-            //console.log(req.files);
+            console.log(req.files);
             var filePath = req.files.path.path;
             var fileName = req.files.path.name;
             var extSplit = fileName.split('.');

@@ -94,10 +94,10 @@ var controller = {
         var fileName = 'imagen no subida...';
 
         if (req.files) {
-            //console.log(req.files)
+            console.log(req.files)
             //req.files.null --- hay que cambiar eso, aún no encontré porque cambia de nombre dependiendo de donde se lo llama. el nombre es arbitrario
-            var filePath = req.files.null.path;
-            var fileName = req.files.null.name;
+            var filePath = req.files.path.path;
+            var fileName = req.files.path.name;
             var extSplit = fileName.split('.');
             var fileExt = extSplit[1];
 
