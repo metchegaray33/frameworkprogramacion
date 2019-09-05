@@ -3,12 +3,11 @@ $(document).ready(function() {
 });
 
 function fileChangedEvent(event) {
-    let file = document.getElementsByName("imagen")
+    let file = document.getElementsByName("path")
     console.log(file);
 }
 
 function cargarControles() {
-
     setBtnCrearOnCliclEvent();
 }
 
@@ -20,17 +19,9 @@ function onCrearClick() {
     guardar(getSaveItem());
 }
 
+
 function guardar(item) {
-    //var urlarchivo = "http://localhost:3700/api/save-Archivos";
     var url = "http://localhost:3700/api/save-Usuarios";
-    /* 
-        ajaxCall(urlarchivo, JSON.stringify(item), function(response) {
-            try {
-                var us_arch = response.archivo;
-            } catch (error) {
-                alert("Hubo un error al guardar la imagen");
-            }
-        }, undefined, undefined, "POST"); */
 
     ajaxCall(url, JSON.stringify(item), function(response) {
         try {
@@ -48,3 +39,29 @@ function guardar(item) {
 function getSaveItem() {
     return $("#formRegistro").serializeFormJSON();
 }
+
+
+var fileInput = document.querySelector('#exampleFormControlFile1');
+
+fileInput.addEventListener('change', function() {
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('POST', 'http://localhost:3700/api/upload-image/5d6eca5c5dd8bb04b84dab3f'); 
+
+    xhr.addEventListener('load', function() {
+        alert('Upload terminé !');
+    });
+
+    // Upload du fichier…
+    var form = new FormData();
+
+    form.append('file', fileInput.files[0]);
+
+    xhr.send(form);
+
+});
+
+
+
+

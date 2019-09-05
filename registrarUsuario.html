@@ -185,10 +185,10 @@
                         <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
                     </div>
                 </div>
-                <form>
+                <form enctype="multipart/form-data" id="forml">
                     <div class="form-group">
                         <label for="exampleFormControlFile1">Foto de perfil</label>
-                        <input type="file" class="form-control-file" name="imagen" id="exampleFormControlFile1" (change)="fileChangedEvent($event)">
+                        <input type="file" class="form-control-file" name="path" id="exampleFormControlFile1">
                     </div>
                 </form>
                 <div class="form-group">

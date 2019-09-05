@@ -4,8 +4,8 @@ var Usuario = require('../modelos/usuarios');
 var Archivo = require('../modelos/Archivos');
 var fs = require('fs');
 
-var controller = {
 
+var controller = {
     //funcion para guardar usuarios a la bd
     saveUsuarios: function(req, res) {
         var usuario = new Usuario();
@@ -20,6 +20,7 @@ var controller = {
         usuario.email = params.email;
         usuario.password = params.password;
         usuario.id_archivo = null;
+       
 
         usuario.save((err, usuarioStored) => {
             if (err) return res.status(500).send({ message: 'Error al guardar' });
@@ -29,6 +30,7 @@ var controller = {
             return res.status(200).send({ usuario: usuarioStored });
         });
     },
+
 
     //devuelve un solo usuario buscado por id
     getUsuario: function(req, res) {
@@ -96,8 +98,8 @@ var controller = {
         if (req.files) {
             console.log(req.files)
             //req.files.null --- hay que cambiar eso, aún no encontré porque cambia de nombre dependiendo de donde se lo llama. el nombre es arbitrario
-            var filePath = req.files.path.path;
-            var fileName = req.files.path.name;
+            var filePath = req.files.file.path;
+            var fileName = req.files.file.originalFilename;
             var extSplit = fileName.split('.');
             var fileExt = extSplit[1];
 
@@ -119,10 +121,11 @@ var controller = {
                         });
                     });
                 });
+            
 
 
             } else {
-                fs.unlink(filepath, (err) => {
+                fs.unlink(filePath, (err) => {
                     return res.status(200).send({ message: 'la extension no es valida' });
                 });
             }
