@@ -102,3 +102,7 @@ function getSaveItem() {
         valoracion_neg: 1
     };*/
 }
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })

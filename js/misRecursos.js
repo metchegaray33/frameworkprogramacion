@@ -27,10 +27,11 @@ function loadData() {
 }
 
 function populatePreviewRecursos(data) {
-    setPreviewRecursosTitulo(data.descripcion);
-    setPreviewRecursosLongDesc(data.longDescription);
-    setPreviewRecursosImg(data.imgUrl);
+    setPreviewRecursosTitulo(data.titulo);
+    setPreviewRecursosLongDesc(data.tema);
+    //setPreviewRecursosImg(data.url);
 }
+
 
 function setPreviewRecursosTitulo(value) {
     $("#previewRecursosTitulo").text(value);
@@ -40,14 +41,16 @@ function setPreviewRecursosLongDesc(value) {
     $("#previewRecursosLongDesc").text(value);
 }
 
-function setPreviewRecursosImg(url) {
-    $("#previewRecursosLongDesc").attr("src", url);
-}
+/*function setPreviewRecursosImg(value) {
+    $("#previewRecursosLongUrl").on("click",location.replace(value));
+}*/
+        
 
 function generateGridButtons() {
     return "<button type='button' class= 'btn btn - success btn-sm preview' >Previsualizar</button>" +
         "<button type='button' class= 'btn btn-warning btn-sm seeUsage' data-toggle='popover' data-trigger='hover'> Ver usos</button>" +
-        "<a href='admRecursos.html'><button type='button' class='btn btn-success ml-1 btn-sm'>Adm Recursos</button></a>";
+        "<a href='admRecursos.html'><button type='button' class='btn btn-success ml-1 btn-sm'>Adm Recursos</button></a>"+
+        '<button type="button" class="btn btn-danger ml-1 btn-sm">Borrar</button>';
 }
 
 function loadGrid(data) {
@@ -55,17 +58,17 @@ function loadGrid(data) {
     var table = $('#' + tableId).DataTable({
         data: data /*jsonRecursos*/ ,
         columns: [
-            { title: "Título", data: "titulo" },
+            { title: "Título", data: "titulo", visible: true },
             { title: "Tipo", data: "tipo" },
             { title: "Autor", data: "autor" },
-            { title: "Descripción", data: "descripcion", visible: true }
+            //{ title: "Tema", data: "tema", visible: true }
             //{ title: "buttons", data: "button" }
             // { title: "usages", data: "usages", visible: false },
             // { title: "cantUSages", data: "cantUSages", visible: false },
 
         ],
         "columnDefs": [{
-            "targets": 4,
+            "targets": 3,
             "data": null,
             "defaultContent": generateGridButtons()
         }]
@@ -77,7 +80,15 @@ function loadGrid(data) {
         var data = table.row($(this).parents('tr')).data();
         populatePreviewRecursos(data);
         $('#dialogPreview').modal("show");
+        $('#dialogPreview').on("click", "#previewRecursosLongUrl", function setPreviewRecursosImg(value){
+            location.replace(data.url);
+        }); 
+    });
 
+    
+
+    $('#tablaRecursos tbody').on('click','button.btn.btn-danger.ml-1.btn-sm',function(){
+        $(this).closest('tr').remove();
     });
 
     $('[data-toggle="popover"]').popover({

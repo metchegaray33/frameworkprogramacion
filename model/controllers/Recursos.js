@@ -13,26 +13,33 @@
 
          recurso.id = params.id;
          recurso.titulo = params.titulo;
-         recurso.descripcion = params.descripcion;
-         recurso.tipo = params.tipo;
          recurso.autor = params.autor;
-         recurso.estilo = params.estilo;
-         recurso.url = params.url;
-         recurso.objetivo = params.objetivo;
-         recurso.aplicabilidad = params.aplicabilidad;
          recurso.formato = params.formato;
+         recurso.tipo = params.tipo;
+         recurso.url = params.url;
+         recurso.tema = params.tema;
+         recurso.palabras = params.palabras;
+         recurso.palabras2 = params.palabras2;
+         recurso.palabras3 = params.palabras3;
+         recurso.palabras4 = params.palabras4;
+         recurso.palabras5 = params.palabras5;
          recurso.idioma = params.idioma;
-         recurso.edad = params.edad;
+
+         
+         //recurso.estilo = params.estilo;
+         
+         //recurso.objetivo = params.objetivo;
+         //recurso.aplicabilidad = params.aplicabilidad;
+         //recurso.formato = params.formato;
+         //recurso.edad = params.edad;
          //recurso.nombre_archivo = null;
          //recurso.tipo_archivo = null;
          //recurso.formato_archivo = null;
          //recurso.path = null;
-         usuario.id_archivo = null;
-         recurso.cant_uso = params.cant_uso;
-         recurso.valoracion_pos = params.valoracion_pos;
-         recurso.valoracion_neg = params.valoracion_neg;
-
-
+         //usuario.id_archivo = null;
+         //recurso.cant_uso = params.cant_uso;
+         //recurso.valoracion_pos = params.valoracion_pos;
+         //recurso.valoracion_neg = params.valoracion_neg;
 
          recurso.save((err, recursoStored) => {
 

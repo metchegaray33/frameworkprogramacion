@@ -81,22 +81,24 @@
                 <button type="button" class="btn btn-outline-secondary btn-lg ml-1">Imprimir</button>
             </div>
         </div>
-        <div class="modal fade md-6 border rounded" id="dialogPreview" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true" style="display:none;">
+    
+        <div class="modal fade" id="dialogPreview" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button class="btn" id="btnClose" data-dismiss="modal"><img src="imagenes/borrar.png" /></button>
+                        <h5 class="modal-title" id="previewRecursosTitulo"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="modal-body">
-                        <div class="container row">
-                            <div class="col-md-7">
-                                <h3 id="previewRecursosTitulo"></h3>
-                                <p id="previewRecursosLongDesc" class="justify-content"></p>
-                            </div>
-                            <div class="col-md-5">
-                                <img src="imagenes/java.png" alt="Imagen java" id="imgJava">
-                            </div>
-                        </div>
+                        <h6 id="previewRecursosLongDesc"></h6>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="previewRecursosLongUrl"> Sitio </button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> 
                     </div>
                 </div>
             </div>
@@ -120,6 +122,7 @@
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="js/Helper.js"></script>
     <script src="js/misRecursos.js"></script>
+
 </body>
 
 </html>
