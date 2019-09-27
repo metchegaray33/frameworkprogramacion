@@ -9,6 +9,7 @@
      //funcion para guardar recursos a la bd
      saveRecursos: function(req, res) {
          var recurso = new Recurso();
+         console.log(req.body);
          var params = req.body;
 
          recurso.id = params.id;
@@ -24,6 +25,8 @@
          recurso.palabras4 = params.palabras4;
          recurso.palabras5 = params.palabras5;
          recurso.idioma = params.idioma;
+         recurso.id_archivo = null;
+       
 
          
          //recurso.estilo = params.estilo;
@@ -117,16 +120,18 @@
         if (req.files) {
             console.log(req.files)
             //req.files.null --- hay que cambiar eso, aún no encontré porque cambia de nombre dependiendo de donde se lo llama. el nombre es arbitrario
-            var filePath = req.files.path.path;
-            var fileName = req.files.path.name;
+            var filePath = req.files.file.path;
+            //var name = filePath.split('uploads');
+            var fileName = req.files.file.originalFilename;
             var extSplit = fileName.split('.');
             var fileExt = extSplit[1];
 
             archivo.nombre_archivo = fileName;
+            //archivo.nombre = name;
             archivo.tipo_archivo = fileExt;
             archivo.path = filePath;
 
-            if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg') {
+            //if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg') {
 
                 archivo.save((err, archivoStored) => {
                     if (err) return res.status(500).send({ message: 'Error al subir imagen' });
@@ -142,11 +147,11 @@
                 });
 
 
-            } else {
+            //} else {
                 fs.unlink(filepath, (err) => {
                     return res.status(200).send({ message: 'la extension no es valida' });
                 });
-            }
+            //}
         } else {
             return res.status(200).send({
                 message: fileName

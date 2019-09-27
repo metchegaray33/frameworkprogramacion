@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/misCursos.css">
     <link rel="stylesheet" href="css/imgVisualiarModal.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nuevoRecurso.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <link href="css/jquery-ui.min.css" rel="stylesheet" />
     <link href="css/jquery-ui.structure.min.css" rel="stylesheet" />
@@ -81,8 +82,91 @@
                 <button type="button" class="btn btn-outline-secondary btn-lg ml-1">Imprimir</button>
             </div>
         </div>
+
+        <div class="modal fade" id="dialogPreview2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1>Modificar Recurso</h1>
+                </div>
+                <div class="modal-body">
+                    <form id="formRecurso2" class="needs-validation" novalidate>
+                        <div class="wrap-input100 bg1 rs1-wrap-input100 novalidate">
+                            <input type="text" name="titulo" class="form-control" id="txtTitulo" placeholder="título" >
+                        </div>
+
+                        <div class="wrap-input100 bg1 rs1-wrap-input100 novalidate">
+                            <br>
+                                <input type="text" name="autor" class="form-control" id="exampleFormControlInput1" placeholder="autor" >
+                        </div>
+                        <div class="input-group mb-3" id="gauche">
+                            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                <br>
+                                <select class="form-control" id="Liste2" name="formato" onchange="change_valeur();">
+                                    <option value=""selected>Formato</option>
+                                    <option value="Texto">Texto</option>
+                                    <option value="Imagen">Imagen</option>
+                                    <option value="Video">Video</option>
+                                    <option value="Sitio Web">Sitio Web</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3" id="droite">
+                            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                                <br>
+                                <select class="form-control" id="Liste3" name="tipo">
+                                    <option value=""selected>Tipo</option>
+                                    <option value="Curso">Curso/Leccion</option>
+                                    <option value="Ejercicios">Ejercicios</option>
+                                    <option value="Ejercicios corregidos">Ejercicios corregidos</option>
+                                    <option value="Documento">Documento</option>
+                                    <option value="Evaluacion">Evaluacion</option>
+                                    <option value="Actividades">Actividades</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite">
+                                <input type="text" class="form-control" id="url" name="url" placeholder="URL" aria-label="Username" aria-describedby="addon-wrapping">
+                            </div>
+                            <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite">
+                            <input type="file" class="btn btn-primary dropdown-toggle" id="file" name="btnFile">
+                            </div>
+                        </div>
+
+                        <div class="wrap-input100 bg1 rs1-wrap-input100">
+                            <input type="text" id="txtTema" class="form-control" name="tema" placeholder="Tema de la enseñanza" aria-label="Username" aria-describedby="addon-wrapping">
+                        </div>
+
+                        <div class="wrap-input100 bg1 rs1-wrap-input100">
+                            <select class="form-control" id="cmbIdioma" name="idioma">
+                                <option value="">Idioma</option>
+                                <option value="Español">Español</option>
+                                <option value="Ingles">Ingles</option>
+                                <option value="Frances">Frances</option>
+                                <option value="Chino">Chino</option>
+                            </select>
+                        </div>
+
+
+
+                    </form>
+                    
+                </div>
+                    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn- btn-lg" data-dismiss="modal">Volver</button>
+                    <button type="button" class="btn btn-success btn-lg" id="btnModificar">Modificar</button>
+                </div>
+            </div>
+            
+        </div>
+        </div>
     
         <div class="modal fade" id="dialogPreview" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -93,16 +177,19 @@
                     </div>
                     <div class="modal-body">
                         <h6 id="previewRecursosLongDesc"></h6>
-                        
-                        
+                        <img  alt="" id="lol">
+                        <video id="audioPlayer"><source src=""></video>       
+                        <!--<a href=javascript:history.go(-1)>Retour</a>-->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" id="previewRecursosLongUrl"> Sitio </button>
+                        <button type="button" class="btn btn-secondary" id="previewRecursosLongArchivo"> Archivo </button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> 
                     </div>
                 </div>
             </div>
         </div>
+
     </main>
     <footer class="footer fluid-bottom mt-4">
         <!--fixed-bottom mt-4-->
@@ -122,6 +209,45 @@
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="js/Helper.js"></script>
     <script src="js/misRecursos.js"></script>
+
+    <script>
+            function change_valeur() {
+                var select = document.getElementById("Liste2");
+                var choice = select.selectedIndex;
+                var texte = select.options[choice].value;
+                if (choice == 4){
+                    $('#txtUrl').css({visibility:"visible"});
+                    $('#url').css({visibility:"visible"});
+                    $('#file').css({visibility:"hidden"});
+                }
+                else if ((choice == 1) || (choice == 2) || (choice == 3)){
+                    $('#txtUrl').css({visibility:"hidden"});
+                    $('#url').css({visibility:"hidden"});
+                    $('#file').css({visibility:"visible"});
+                }
+            }
+    </script>
+
+<script> function play(idPlayer, control) {
+    var player = document.querySelector('#' + idPlayer);
+	
+    if (player.paused) {
+        player.play();
+        control.textContent = 'Pause';
+    } else {
+        player.pause();	
+        control.textContent = 'Play';
+    }
+}
+
+function resume(idPlayer) {
+    var player = document.querySelector('#' + idPlayer);
+	
+    player.currentTime = 0;
+    player.pause();
+}
+</script>
+    
 
 </body>
 

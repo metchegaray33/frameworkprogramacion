@@ -56,9 +56,9 @@ var fileInput = document.querySelector('#exampleFormControlFile1');
 
     xhr.open('POST', 'http://localhost:3700/api/upload-image/'+id_usuario); 
 
-    xhr.addEventListener('load', function() {
+    /*xhr.addEventListener('load', function() {
         alert(id_usuario);
-    });
+    });*/
 
     // Upload du fichier…
     var form = new FormData();

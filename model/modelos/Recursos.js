@@ -17,6 +17,7 @@ var RecursosSchema = Schema({
     palabras4: String,
     palabras5: String,
     idioma: String,
+    id_archivo: String,
     
     //estilo: String,
     //objetivo: String,

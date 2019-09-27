@@ -1,21 +1,20 @@
 $(document).ready(function() {
     $("#btnCrear").on("click", function(){
         guardar(getSaveItem());
-        //alert(id_usuario);
         archive();
     });
 
     function guardar(item) {
     
-        var url = "http://localhost:3700/api/save-Usuarios";
+        var url = "http://localhost:3700/api/save-Recursos";
     
         ajaxCall(url, JSON.stringify(item), function(response) {
             try {
-                var us = response.usuario;
-                id_usuario=us._id;
+                var us = response.recurso;
+                id_recurso=us._id;
                 if (us._id != undefined)
                 //alert("Ups! hubo un error! " + error)
-                return id_usuario;
+                return id_recurso;
     
             } catch (error) {
                 alert("Ups! hubo un error! " + error)
@@ -27,16 +26,16 @@ $(document).ready(function() {
     }
     
     function getSaveItem() {
-        return $("#formRegistro").serializeFormJSON();
+        return $("#formRecurso").serializeFormJSON();
     }
 
 
 function archive(){
-    var fileInput = document.querySelector('#exampleFormControlFile1');
+    var fileInput = document.querySelector('#file');
 
     var xhr = new XMLHttpRequest();
 
-    xhr.open('POST', 'http://localhost:3700/api/upload-image/'+id_usuario); 
+    xhr.open('POST', 'http://localhost:3700/api/upload-imageRecurso/'+id_recurso); 
 
     var form = new FormData();
 
@@ -71,4 +70,3 @@ function archive(){
     }, undefined, undefined, "POST");*/
 
 });
-
