@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Framework UB</title>
-    
+
     <!--Bootstrap css-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/nuevoRecurso.css">
@@ -66,15 +66,15 @@
     <hr size="30" width="90%">
 
     <main>
-        
+
         <div class="container" id="containerMarco">
             <h1>Nuevo Recurso</h1>
             <br>
             <form id="formRecurso" class="needs-validation" novalidate>
                 <div class="wrap-input100 bg1 rs1-wrap-input100" id="lo">
-                        <label for="txtTitulo">Título</label>
-                        <button type="button" id="lolo" data-toggle="tooltip" data-placement="top" title="El titulo esta orientado a que el recurso sea encontrado facilmente. Coloque un titulo significativo"> ? </button>
-                        <input type="text" name="titulo" class="form-control" id="txtTitulo" placeholder="título" >     
+                    <label for="txtTitulo">Título</label>
+                    <button type="button" id="lolo" data-toggle="tooltip" data-placement="top" title="El titulo esta orientado a que el recurso sea encontrado facilmente. Coloque un titulo significativo"> ? </button>
+                    <input type="text" name="titulo" class="form-control" id="txtTitulo" placeholder="título">
                 </div>
 
                 <div class="wrap-input100 bg1 rs1-wrap-input100" id="el">
@@ -84,24 +84,24 @@
                 </div>
 
                 <div class="input-group mb-3" id="gauche">
-                        <div class="wrap-input100 bg1 rs1-wrap-input100">
-                            <label for="Liste2">Formato de recurso</label>
-                            <button type="button" id="lolo" data-toggle="tooltip" data-placement="top" title="Esto le permitirá al docente saber cómo usar este recurso."> ? </button>
-                            <select class="form-control" id="Liste2" name="formato" onchange="change_valeur();">
+                    <div class="wrap-input100 bg1 rs1-wrap-input100">
+                        <label for="Liste2">Formato de recurso</label>
+                        <button type="button" id="lolo" data-toggle="tooltip" data-placement="top" title="Esto le permitirá al docente saber cómo usar este recurso."> ? </button>
+                        <select class="form-control" id="Liste2" name="formato" onchange="change_valeur();">
                                     <option value=""selected>Formato</option>
                                     <option value="Texto">Texto</option>
                                     <option value="Imagen">Imagen</option>
                                     <option value="Video">Video</option>
                                     <option value="Sitio Web">Sitio Web</option>
                             </select>
-                        </div>
                     </div>
+                </div>
 
                 <div class="input-group mb-3" id="droite">
-                        <div class="wrap-input100 bg1 rs1-wrap-input100">
-                            <label for="Liste3"> Tipo de Recurso </label>
-                            <button type="button" id="lolo" data-toggle="tooltip" data-placement="top" title="Esto le permitirá al docente saber cómo usar este recurso."> ? </button>
-                            <select class="form-control" id="Liste3" name="tipo">
+                    <div class="wrap-input100 bg1 rs1-wrap-input100">
+                        <label for="Liste3"> Tipo de Recurso </label>
+                        <button type="button" id="lolo" data-toggle="tooltip" data-placement="top" title="Esto le permitirá al docente saber cómo usar este recurso."> ? </button>
+                        <select class="form-control" id="Liste3" name="tipo">
                                     <option value=""selected>Tipo de Recurso</option>
                                     <option value="Curso">Curso/Leccion</option>
                                     <option value="Ejercicios">Ejercicios</option>
@@ -110,15 +110,15 @@
                                     <option value="Evaluacion">Evaluacion</option>
                                     <option value="Actividades">Actividades</option>
                             </select>
-                        </div>
                     </div>
+                </div>
 
                 <div class="input-group mb-3">
                     <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite">
                         <input type="text" class="form-control" id="url" name="url" placeholder="URL" aria-label="Username" aria-describedby="addon-wrapping">
                     </div>
                     <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite">
-                    <input type="file" class="btn btn-primary dropdown-toggle" id="file" name="btnFile">
+                        <input type="file" class="btn btn-primary dropdown-toggle" id="file" name="btnFile">
                     </div>
                 </div>
 
@@ -150,33 +150,33 @@
                 <div class="input-group mb-3">
                     <label for="txtWords">Palabras Clave</label>
                     <button type="button" id="lolo" data-toggle="tooltip" data-placement="top" title="Incluya caracteristicas especificas del recurso. Utilice preferentemente las palabras clave ya definidas."> ? </button>
-                <div class="wrap-input100 bg1 rs1-wrap-input100" id="gauche2">
-                    <input type="text" class="form-control" id="txtWords" name="palabras">
-                </div>
-                <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite2">
-                    <input type="text" class="form-control" id="txtWords2" name="palabras2">
-                </div>
-                <div class="wrap-input100 bg1 rs1-wrap-input100" id="centre">
-                    <input type="text" class="form-control" id="txtWords3" name="palabras3">
-                </div>
-                <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite2">
-                    <input type="text" class="form-control" id="txtWords3" name="palabras4">
-                </div>
-                <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite2">
-                    <input type="text" class="form-control" id="txtWords3" name="palabras5">
-                </div>
+                    <div class="wrap-input100 bg1 rs1-wrap-input100" id="gauche2">
+                        <input type="text" class="form-control" id="txtWords" name="palabras">
+                    </div>
+                    <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite2">
+                        <input type="text" class="form-control" id="txtWords2" name="palabras2">
+                    </div>
+                    <div class="wrap-input100 bg1 rs1-wrap-input100" id="centre">
+                        <input type="text" class="form-control" id="txtWords3" name="palabras3">
+                    </div>
+                    <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite2">
+                        <input type="text" class="form-control" id="txtWords3" name="palabras4">
+                    </div>
+                    <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite2">
+                        <input type="text" class="form-control" id="txtWords3" name="palabras5">
+                    </div>
                 </div>
 
                 <div class="wrap-input100 bg1 rs1-wrap-input100">
-                        <label for="cmbIdioma">Idioma</label>
-                        <select class="form-control" id="cmbIdioma" name="idioma">
+                    <label for="cmbIdioma">Idioma</label>
+                    <select class="form-control" id="cmbIdioma" name="idioma">
                             <option value="">Idioma</option>
                             <option value="Español">Español</option>
                             <option value="Ingles">Ingles</option>
                             <option value="Frances">Frances</option>
                             <option value="Chino">Chino</option>
                         </select>
-                    </div>
+                </div>
 
                 <!--<div class="form-group">
                     <label for="cmbEstilo">Estilo de Aprendizaje</label>
@@ -250,27 +250,37 @@
 
     <script src="js/Helper.js"></script>
     <script src="js/nuevoRecurso2.js" type="text/javascript"></script>
-    <script src="js/jquery.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
     <script>
         function change_valeur() {
             var select = document.getElementById("Liste2");
             var choice = select.selectedIndex;
             var texte = select.options[choice].value;
-            if (choice == 4){
-                $('#txtUrl').css({visibility:"visible"});
-                $('#url').css({visibility:"visible"});
-                $('#file').css({visibility:"hidden"});
-            }
-            else if ((choice == 1) || (choice == 2) || (choice == 3)){
-                $('#txtUrl').css({visibility:"hidden"});
-                $('#url').css({visibility:"hidden"});
-                $('#file').css({visibility:"visible"});
+            if (choice == 4) {
+                $('#txtUrl').css({
+                    visibility: "visible"
+                });
+                $('#url').css({
+                    visibility: "visible"
+                });
+                $('#file').css({
+                    visibility: "hidden"
+                });
+            } else if ((choice == 1) || (choice == 2) || (choice == 3)) {
+                $('#txtUrl').css({
+                    visibility: "hidden"
+                });
+                $('#url').css({
+                    visibility: "hidden"
+                });
+                $('#file').css({
+                    visibility: "visible"
+                });
             }
         }
-        
     </script>
 
-    
+
 </body>
 
 </html>

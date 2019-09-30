@@ -9,7 +9,7 @@
      //funcion para guardar recursos a la bd
      saveRecursos: function(req, res) {
          var recurso = new Recurso();
-         console.log(req.body);
+         //console.log(req.body);
          var params = req.body;
 
          recurso.id = params.id;
@@ -26,11 +26,11 @@
          recurso.palabras5 = params.palabras5;
          recurso.idioma = params.idioma;
          recurso.id_archivo = null;
-       
 
-         
+
+
          //recurso.estilo = params.estilo;
-         
+
          //recurso.objetivo = params.objetivo;
          //recurso.aplicabilidad = params.aplicabilidad;
          //recurso.formato = params.formato;
@@ -113,51 +113,50 @@
 
      //Funcion para subir imagenes
      uploadImage: function(req, res) {
-        var archivo = new Archivo();
-        var recursoId = req.params.id;
-        var fileName = 'imagen no subida...';
+         var archivo = new Archivo();
+         var recursoId = req.params.id;
+         var fileName = 'imagen no subida...';
+         if (req.files) {
 
-        if (req.files) {
-            console.log(req.files)
-            //req.files.null --- hay que cambiar eso, aún no encontré porque cambia de nombre dependiendo de donde se lo llama. el nombre es arbitrario
-            var filePath = req.files.file.path;
-            //var name = filePath.split('uploads');
-            var fileName = req.files.file.originalFilename;
-            var extSplit = fileName.split('.');
-            var fileExt = extSplit[1];
+             //req.files.null --- hay que cambiar eso, aún no encontré porque cambia de nombre dependiendo de donde se lo llama. el nombre es arbitrario
+             var filePath = req.files.file.path;
+             //var name = filePath.split('uploads');
+             var fileName = req.files.file.originalFilename;
+             var extSplit = fileName.split('.');
+             var fileExt = extSplit[1];
 
-            archivo.nombre_archivo = fileName;
-            //archivo.nombre = name;
-            archivo.tipo_archivo = fileExt;
-            archivo.path = filePath;
+             archivo.nombre_archivo = fileName;
+             //archivo.nombre = name;
+             archivo.tipo_archivo = fileExt;
+             archivo.path = filePath;
 
-            //if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg') {
+             //if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg') {
 
-                archivo.save((err, archivoStored) => {
-                    if (err) return res.status(500).send({ message: 'Error al subir imagen' });
+             archivo.save((err, archivoStored) => {
+                 if (err) return res.status(500).send({ message: 'Error al subir imagen' });
 
-                    if (!archivoStored) return res.status(404).send({ message: 'No se ha podido subir la imagen' });
+                 if (!archivoStored) return res.status(404).send({ message: 'No se ha podido subir la imagen' });
 
-                    Recurso.findByIdAndUpdate(recursoId, { id_archivo: archivoStored._id }, { new: true }, (err, recursoUpdate) => {
+                 Recurso.findByIdAndUpdate(recursoId, { id_archivo: archivoStored._id }, { new: true }, (err, recursoUpdate) => {
 
-                        return res.status(200).send({
-                            recurso: recursoUpdate
-                        });
-                    });
-                });
+                     return res.status(200).send({
+                         recurso: recursoUpdate
+                     });
+                 });
+             });
 
 
-            //} else {
-                fs.unlink(filepath, (err) => {
-                    return res.status(200).send({ message: 'la extension no es valida' });
-                });
-            //}
-        } else {
-            return res.status(200).send({
-                message: fileName
-            });
-        }
-    }
-}
+             //} else {
+             // fs.unlink(filepath, (err) => {
+             //     return res.status(200).send({ message: 'la extension no es valida' });
+             // });
+             //}
+         } else {
+             return res.status(200).send({
+                 message: fileName
+             });
+         }
+     }
+ }
 
  module.exports = controller;
