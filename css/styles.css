@@ -7,51 +7,23 @@ body {
     position: relative;
 }
 
+header{
+    height: 25%;
+}
+
 main {
-    height: 77.5%;
+    height: 75%;
     position: relative;
 }
 
-#logo {
-    width: 35%;
-    height: auto;
-    margin-left: 35px;
-    margin-top: 10px;
+img{  
+    display:flex;
+    margin:0 auto;
 }
-
-.registrarse {
-    text-align: center;
-    margin-top: 15px;
-}
-
-#section {
-    margin-top: 80px;
-}
-
-#parrafo {
-    float: left;
-    margin-left: 90px;
-}
-
-#ejemplo1 {
-    position: relative;
-    left: 110px;
-}
-
-#articulo {
-    float: left;
-    margin-left: 100px
-}
-
-#aside {
-    margin-right: 50px;
-}
-
-#tarjetas {
-    display: inline-block;
-    position: relative;
-    left: 400px;
-    width: 60%;
+  
+a{
+    color: black;
+    text-decoration: none;
 }
 
 .footer {
