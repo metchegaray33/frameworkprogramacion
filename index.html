@@ -5,166 +5,93 @@
     <meta charset="UTF-8">
     <title>Ejemplo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <header>
-        <div class="container-fluid row">
-            <section class="col-md-2 ">
-                <a href="index.html"><img src="imagenes/universidad.jpg" alt="" class="h-100 w-100"></a>
-            </section>
-            <section class="col-md-6 ">
-                <nav class="navbar justify-content-center navbar-expand-md mt-4">
-                    <ul class="nav nav-pills nav-fill">
-                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="misRecursos.html" class="nav-link">Recursos Educativos</a></li>
-                        <li class="nav-item"><a href="misCursos.html" class="nav-link">Mis cursos</a></li>
-                        <li class="nav-item  dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reportes</a>
-                            <div class="dropdown-menu">
-                                <a href="SobreCursos.html" class="dropdown-item">Sobre Cursos</a>
-                                <a href="sobreRecursos.html" class="dropdown-item">Sobre Recursos</a>
-                            </div>
-                        </li>
-                        <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
-                        <li class="nav-item"><a href="ayuda.html" class="nav-link">Ayuda</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <section class="col-md-3 container ">
-                <div class="container">
-                    <form action="">
-                        <div class="input-group mb-2">
-                            <input type="text" class="form-control input-sm" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary btn-sm" type="submit">Search</button>
-                            </div>
-                        </div>
-                    </form>
-
-                </div>
-                <div class="container h-50" id="divBotones">
-                    <a href="registrarUsuario.html"> <button class="btn btn-outline-danger btn-rounded mt-1 " id="btnCrearCuenta"> Crear cuenta</button></a>
-                    <button class="btn btn-outline-success ml-2 mt-1" id="btnIniciarSesion" data-toggle="modal" data-target="#modelId">Iniciar Sesion</button>
-                </div>
-            </section>
-            <section class="col-md-1">
-                <a href="index.html"><img src="imagenes/Spain.png" alt="España"></a>
-                <a href="indexIngles.html"><img src="imagenes/United-kingdom.png" alt="Ingles"></a>
-                <a href="indexFrances.html"><img src="imagenes/France.png" alt="Francia"></a>
-            </section>
-        </div>
-
-
-
-        <script>
-            $(document).ready(function() {
-                $('#btnEnviar').click(function(e) {
-                    $('#divBotones').empty();
-
-                });
-            });
-        </script>
-
-
-        <!--MODAL-->
-        <div class="modal fade md-6 border rounded" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title text-justify">Iniciar Sesion</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container">
-                            <form action="" id="formulario">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">@</div>
-                                    </div>
-                                    <input type="email" class="form-control" id="email" placeholder="Email">
-                                </div>
-                                <div id="resultadoErrorEmail"></div>
-                                <div class="input-group mt-4">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">@</div>
-                                    </div>
-                                    <input type="password" class="form-control" id="password" placeholder="Password">
-                                </div>
-                                <div id="resultadoErrorPassword"></div>
-                        </div>
-                    </div>
-                    <div class="modal-footer d-flex justify-content-center">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-success" id="btnEnviar">Iniciar Sesion</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Fin Modal-->
-    </header>
-    <hr size="30" width="90%">
-
-    <main>
-        <div class="container-fluid row">
-            <div class="col-md-7 ml-4 mt-3 mb-3">
-                <h2>Curso de Lenguaje Python</h2>
-                <p class="text-justify">Los cursos en vivo de Python, dirigidos por un instructor, se enfocan en varios aspectos del lenguaje Python. Algunos de los temas tratados incluyen los fundamentos de Python, Python avanzado, Python scripting y Python para aplicaciones
-                    relacionados a las finanzas, banca y Seguro.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="img/python.jpg" alt="imagen" style="width: 30%">
-            </div>
-            <hr size="30" width="90%">
-        </div>
-        <div class="container-fluid row">
-            <div class="col-md-7 ml-4 mt-3 mb-3">
-                <h2>Recursos Renovables</h2>
-                <p class="text-justify">Un recurso renovable es un curso natural que se puede restaurar por procesos naturales a una velocidad superior a la del consumo por los seres humanos. La radiación solar, las mareas, el viento y la energía hidroeléctrica son recursos
-                    perpetuos que no corren peligro de agotarse a largo plazo. </p>
-            </div>
-            <div class="col-md-4">
-                <img src="img/recursos.jpg" alt="imagen">
-            </div>
-            <hr size="30" width="90%">
-        </div>
-        <div class="container-fluid row">
-            <div class="col-md-7 ml-4 mt-3 mb-3">
-                <h2>Sistemas Operativos</h2>
-                <p class="text-justify">Un sistema operativo es el software principal o conjunto de programas de un sistema que gestiona los recursos de hardware y provee servicios a los programas, corriendo en modo privilegiado respecto de los restantes.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="img/sistemas.jpg" alt="imagen">
-            </div>
-            <hr size="30" width="90%">
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="social">
-            <a href="https://www.facebook.com/Universidad.de.Belgrano/" class="icon-facebook" id="facebook" target="_blank"><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-f.png"></a>
-            <a href="https://twitter.com/ubeduar?lang=es" class="icon-twitter" id="twitter" target="_blank"><img src="https://img.icons8.com/color/30/000000/twitter.png"></a>
-            <a href="" class="icon-instagram" id="instagram" target="_blank"><img src="imagenes/instagram.png" alt=""></a>
-            <a href="" class="icon-linkedin" id="linkedin" target="_blank"><img src="https://img.icons8.com/color/30/000000/linkedin-2.png"></a>
-        </div>
-    </footer>
+    <header ">
+			<div class="container-fluid row ">
+					<section class="col-md-2 ">
+						<img src="imagenes/universidad.jpg " alt=" " class="h-100 w-100 ">
+					</section>
+					<section class="col-md-6 ">
+						<nav class="navbar justify-content-center navbar-expand-md mt-4 ">
+							<ul class="nav nav-pills nav-fill ">
+								<li class="nav-item "><a href="# " class="nav-link ">Recursos Educativos</a></li>
+								<li class="nav-item "><a href="# " class="nav-link ">Mis cursos</a></li>
+								<li class="nav-item "><a href="# " class="nav-link ">Reportes</a></li>
+								<li class="nav-item "><a href="# " class="nav-link ">Contacto</a></li>
+								<li class="nav-item "><a href="# " class="nav-link ">Ayuda</a></li>
+							</ul>
+						</nav>
+					</section>
+					<section class="col-md-4 ">
+						<div class="container row col-md-11 h-50 ">
+							<nav class="navbar navbar-expand-md ">
+								<a href="# " class="nav-link "><img src="https://img.icons8.com/color/30/000000/twitter.png "></a>
+								<a href="# " class="nav-link "><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-f.png "></a>
+								<form action=" " class="form-inline ">
+									<div class="input-group ">
+										<input type="text " class="form-control form-control-sm ">
+										<div class="input-group-append ">
+											<button class="btn " type="submit "><img src="https://img.icons8.com/ios-glyphs/20/000000/search.png "></button>
+										</div>
+									</div>
+								</form>
+							</nav>
+						</div>
+						<div class="container row col-md-11 ">
+							<button class="btn btn-success m-1 active btn-sm " id="btnCrearCuenta ">Crear una cuenta gratuita</button>
+							<button class="btn btn-outline-success btn-sm " id="btnIniciarSesion ">Iniciar Sesion</button>	
+						</div>
+						<div class="container col-md-1 ">
+							
+						</div>
+					</section>
+			</div>	
+		</header>
+		<hr size="30 " width="90% ">
+		
+		<main>
+			<div class="container-fluid row ">
+					<div class="col-md-7 ml-4 mt-3 mb-3 " >
+						<h2>Titulo 1</h2>
+						<p class="text-justify ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore non alias, quos omnis, culpa velit quisquam eveniet sint quo nesciunt hic laudantium, explicabo. Quisquam eos magnam magni, non natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus amet temporibus recusandae quaerat! Nisi illo eaque voluptatem ipsam. Velit reiciendis beatae delectus architecto alias at hic cupiditate eius eum quos! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ab alias, fugit iusto cupiditate omnis sapiente commodi, possimus eligendi veniam sunt distinctio sint tempore minus maiores ullam itaque fuga natus.</p>
+					</div>
+					<div class="col-md-4 ">
+						<img src="imagenes/images.png " alt="imagen ">
+					</div>
+					<hr size="30 " width="90% ">
+			</div>
+			<div class="container-fluid row ">
+					<div class="col-md-7 ml-4 mt-3 mb-3 ">
+						<h2>Titulo 2</h2>
+						<p class="text-justify ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore non alias, quos omnis, culpa velit quisquam eveniet sint quo nesciunt hic laudantium, explicabo. Quisquam eos magnam magni, non natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus amet temporibus recusandae quaerat! Nisi illo eaque voluptatem ipsam. Velit reiciendis beatae delectus architecto alias at hic cupiditate eius eum quos! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ab alias, fugit iusto cupiditate omnis sapiente commodi, possimus eligendi veniam sunt distinctio sint tempore minus maiores ullam itaque fuga natus.</p>
+					</div>
+					<div class="col-md-4 ">
+						<img src="imagenes/images.png " alt="imagen ">
+					</div>
+					<hr size="30 " width="90% ">
+			</div>
+			<div class="container-fluid row ">
+					<div class="col-md-7 ml-4 mt-3 mb-3 ">
+						<h2>Titulo 3</h2>
+						<p class="text-justify ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore non alias, quos omnis, culpa velit quisquam eveniet sint quo nesciunt hic laudantium, explicabo. Quisquam eos magnam magni, non natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus amet temporibus recusandae quaerat! Nisi illo eaque voluptatem ipsam. Velit reiciendis beatae delectus architecto alias at hic cupiditate eius eum quos! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ab alias, fugit iusto cupiditate omnis sapiente commodi, possimus eligendi veniam sunt distinctio sint tempore minus maiores ullam itaque fuga natus.</p>
+					</div>
+					<div class="col-md-4 ">
+						<img src="imagenes/images.png " alt="imagen ">
+					</div>
+					<hr size="30 " width="90% ">
+			</div>
+		</main>
+		<footer></footer>
 
 
 
-    <script src="iniciarSesion.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+  
 </body>
-
 </html>
