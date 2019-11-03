@@ -11,58 +11,51 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/nuevoRecurso.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header>
         <div class="container-fluid row">
-            <section class="col-md-2 ">
-                <a href="index.html"><img src="imagenes/universidad.jpg" alt="" class="h-100 w-100"></a>
-            </section>
-            <section class="col-md-6 ">
-                <nav class="navbar justify-content-center navbar-expand-md mt-4">
-                    <ul class="nav nav-pills nav-fill">
-                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="misRecursos.html" class="nav-link">Recursos Educativos</a></li>
-                        <li class="nav-item"><a href="misCursos.html" class="nav-link">Mis cursos</a></li>
-                        <li class="nav-item"><a href="misUnidades.html" class="nav-link">Mis Unidades</a></li>
-                        <li class="nav-item  dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reportes</a>
-                            <div class="dropdown-menu">
-                                <a href="SobreCursos.html" class="dropdown-item">Sobre Cursos</a>
-                                <a href="sobreRecursos.html" class="dropdown-item">Sobre Recursos</a>
-                            </div>
-                        </li>
-                        <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
-                        <li class="nav-item"><a href="ayuda.html" class="nav-link">Ayuda</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <section class="col-md-3 container ">
-                <div class="container">
-                    <form action="">
-                        <div class="input-group mb-2">
-                            <input type="text" class="form-control input-sm" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary btn-sm" type="submit">Search</button>
-                            </div>
-                        </div>
-                    </form>
-
+          <div class="col-md-2" id="univ">          
+            <a href="index.html"><img src="imagenes/universidad.jpg" alt="" class="h-100 w-100"></a>
+          </div>
+                
+          <nav class="navbar justify-content-center navbar-expand-md ">
+            <ul class="navbar-nav w-100 justify-content-center px-3">
+              <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item  dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recursos</a>
+              <div class="dropdown-menu">
+                <a href="misRecursos.html" class="dropdown-item">Ver Recursos</a>
+                <a href="nuevoRecurso.html" class="dropdown-item">Crear nuevo Recurso</a>
+              </div>
+              </li>
+              <li class="nav-item active"><a href="misCursos.html" class="nav-link">Mis cursos</a></li>
+              <li class="nav-item active"><a href="misUnidades.html" class="nav-link">Mis Unidades</a></li>
+              <li class="nav-item  dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reportes</a>
+              <div class="dropdown-menu">
+                <a href="SobreCursos.html" class="dropdown-item">Sobre Cursos</a>
+                <a href="sobreRecursos.html" class="dropdown-item">Sobre Recursos</a>
+              </div>
+              </li>
+              <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+              <li class="nav-item"><a href="ayuda.html" class="nav-link">Ayuda</a></li>
+              <form action="">
+                <div class="input-group mb-1 mt-0">
+                  <input type="text" class="form-control input-sm" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-sm" type="submit">Search</button>
+                  </div>
                 </div>
-                <div class="container row d-flex align-items-center " id="divBotones">
-                    <img src="imagenes/persona.jpeg" alt="" id="iconoProfesor">
-                    <h3 id="nombreProfesor" class="ml-0">Hola ! Profesor Nicky</h3>
-                    <a href="index.html" class="btn btn-outline-danger" id="logOut">Log Out</a>
-                </div>
-            </section>
-            <section class="col-md-1">
-                <a href="index.html"><img src="imagenes/Spain.png" alt="España"></a>
-                <a href="indexIngles.html"><img src="imagenes/United-kingdom.png" alt="Ingles"></a>
-                <a href="indexFrances.html"><img src="imagenes/France.png" alt="Francia"></a>
-            </section>
-        </div>
-    </header>
+              </form>
+              <a href="https://www.facebook.com/Universidad.de.Belgrano/" class="icon-facebook" id="facebook" target="_blank"><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-f.png"></a>
+              <a href="https://twitter.com/ubeduar?lang=es" class="icon-twitter" id="twitter" target="_blank"><img src="https://img.icons8.com/color/30/000000/twitter.png"></a>
+              <a href="" class="icon-instagram" id="instagram" target="_blank"><img src="imagenes/instagram.png" alt=""></a>
+              <a href="" class="icon-linkedin" id="linkedin" target="_blank"><img src="https://img.icons8.com/color/30/000000/linkedin-2.png"></a>
+            </ul>
+          </nav>
+          </div>
+      </header>
     <hr size="30" width="90%">
 
     <main>
@@ -128,25 +121,6 @@
                     <input type="text" id="txtTema" class="form-control" name="tema" placeholder="Tema de la enseñanza" aria-label="Username" aria-describedby="addon-wrapping">
                 </div>
 
-                <!--<div class="form-group">
-                        <br>
-                        <label for="radiochoice"> Grado de instrucción</label>
-                        <button type="button" id="lolo" data-toggle="tooltip" data-placement="top" title="Esto permite al docente adaptar el uso a las necesidades del alumno y buscar rápidamente un recurso basado en un determinado nivel de estudio."> ? </button>
-                        <br>
-                        <input type="checkbox" id="radiochoice"name="grado" value="primer año"> Primer año de estudios&nbsp;&nbsp;
-                        <input type="checkbox" id="radiochoice"name="grado" value="segundo año"> Segundo año de estudios&nbsp;&nbsp;
-                        <input type="checkbox" id="radiochoice"name="grado" value="tercer año"> Tercer año de estudios&nbsp;&nbsp;
-                        <input type="checkbox" id="radiochoice"name="grado" value="cuarto año"> Cuarto año de estudios&nbsp;&nbsp;
-                        <input type="checkbox" id="radiochoice" name="grado" value="quinto año"> Quinto año de estudios&nbsp;&nbsp;
-                </div>
-                <br>
-                <div class="wrap-input100 bg1 rs1-wrap-input100">
-                    
-                    <label for="exampleFormControlTextarea1">Descripción</label>
-                    <button type="button" id="lolo" data-toggle="tooltip" data-placement="top" title="Se solicita una descripción completa del recurso para generar palabras clave, lo que facilita la búsqueda."> ? </button>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" name="descripcion"></textarea>
-                </div>-->
-
                 <div class="input-group mb-3">
                     <label for="txtWords">Palabras Clave</label>
                     <button type="button" id="lolo" data-toggle="tooltip" data-placement="top" title="Incluya caracteristicas especificas del recurso. Utilice preferentemente las palabras clave ya definidas."> ? </button>
@@ -178,50 +152,6 @@
                         </select>
                 </div>
 
-                <!--<div class="form-group">
-                    <label for="cmbEstilo">Estilo de Aprendizaje</label>
-                    <select class="form-control" id="cmbEstilo" name="estilo">
-                        <option value=""></option>
-                        <option value="1">Activo</option>
-                        <option value="2">Reflexivo</option>
-                        <option value="3">Teorico</option>
-                        <option value="3">Prágmatico</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="cmbAplicabilidad">Aplicabilidad</label>
-                    <select class="form-control" id="cmbAplicabilidad" name="aplicabilidad">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="cmbFormato">Formato de recurso</label>
-                    <select class="form-control" id="cmbFormato" name="formato">
-                        <option value="">Formato</option>
-                        <option value="Herramienta">Herramienta</option>
-                        <option value="Plataforma Cerrada">Plataforma Cerrada</option>
-                        <option value="Sitio">Sitio</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="cmbIdioma">Idioma</label>
-                    <select class="form-control" id="cmbIdioma" name="idioma">
-                        <option value="">Idioma</option>
-                        <option value="Español">Español</option>
-                        <option value="Ingles">Ingles</option>
-                        <option value="Frances">Frances</option>
-                        <option value="Chino">Chino</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="nbrEdad">Edad</label>
-                    <input type="number" id="nbrEdad" name="edad">
-                </div>-->
-
                 <div class="container" id="botones">
                     <a href="misRecursos.html">
                         <button type="button" class="btn btn-primary btn-lg">Volver</button>
@@ -231,14 +161,14 @@
             </form>
         </div>
     </main>
-    <footer class="footer mt-4">
+    <!--<footer class="footer mt-4">
         <div class="social">
             <a href="https://www.facebook.com/Universidad.de.Belgrano/" class="icon-facebook" id="facebook"><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-f.png"></a>
             <a href="https://twitter.com/ubeduar?lang=es" class="icon-twitter" id="twitter"><img src="https://img.icons8.com/color/30/000000/twitter.png"></a>
             <a href="" class="icon-instagram" id="instagram"><img src="imagenes/instagram.png" alt=""></a>
             <a href="" class="icon-linkedin" id="linkedin"><img src="https://img.icons8.com/color/30/000000/linkedin-2.png"></a>
         </div>
-    </footer>
+    </footer>-->
 
     <!--Scripts-->
     <script src="js/jquery-3.3.1.min.js"></script>

@@ -1,7 +1,3 @@
-#misCursos {
-    margin-top: 50px;
-    padding: 0%;
-}
 
 #botones {
     position: relative;
@@ -21,9 +17,38 @@ table>thead{
     background-color:grey;
 }
 
-.dataTables_paginate a {
-    padding: 6px 9px !important;
-    background: #ddd !important;
-    border-color: #ddd !important;
+
+#fluide{
+    float: right;
+    top: 0%;
+    width: 70%;
 }
 
+
+
+#p{
+    clear: right;
+    position: absolute;
+    background-color: #aacfd9;
+    border-radius: 10px;
+    max-width: 500px;
+    left: 0.7%;
+    top : 15.5%;
+    display: block;
+    position: absolute;
+    overflow: auto;
+}
+
+p{
+    margin-right: 0%;
+    display: inline;
+}
+
+#titre{
+    font-weight: 700;
+}
+
+.row#recurso{
+    background-color: rgb(226, 237, 250);
+    
+}

@@ -3,8 +3,8 @@
     margin-top: 50px;
     border: rgb(138, 7, 7) 3px solid;
     border-radius: 20px;
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
     margin: auto;
 }
 

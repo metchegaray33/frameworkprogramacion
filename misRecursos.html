@@ -1,254 +1,210 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang='en' class=''>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mis Recursos</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/misCursos.css">
-    <link rel="stylesheet" href="css/imgVisualiarModal.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/nuevoRecurso.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-    <link href="css/jquery-ui.min.css" rel="stylesheet" />
-    <link href="css/jquery-ui.structure.min.css" rel="stylesheet" />
-
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/ericwinton/pen/jqKyyq?depth=everything&order=popularity&page=7&q=product&show_forks=false" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mis Recursos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/misCursos.css">
+  <link rel="stylesheet" href="css/imgVisualiarModal.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/nuevoRecurso.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link href="css/jquery-ui.min.css" rel="stylesheet" />
+  <link href="css/jquery-ui.structure.min.css" rel="stylesheet" /> 
 
 </head>
 
 <body>
-    <header>
-        <div class="container-fluid row">
-            <section class="col-md-2 ">
-                <a href="index.html"><img src="imagenes/universidad.jpg" alt="" class="h-100 w-100"></a>
-            </section>
-            <section class="col-md-6 ">
-                <nav class="navbar justify-content-center navbar-expand-md mt-4">
-                    <ul class="nav nav-pills nav-fill">
-                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="misRecursos.html" class="nav-link">Recursos Educativos</a></li>
-                        <li class="nav-item"><a href="misCursos.html" class="nav-link">Mis cursos</a></li>
-                        <li class="nav-item"><a href="misUnidades.html" class="nav-link">Mis Unidades</a></li>
-                        <li class="nav-item  dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reportes</a>
-                            <div class="dropdown-menu">
-                                <a href="SobreCursos.html" class="dropdown-item">Sobre Cursos</a>
-                                <a href="sobreRecursos.html" class="dropdown-item">Sobre Recursos</a>
-                            </div>
-                        </li>
-                        <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
-                        <li class="nav-item"><a href="ayuda.html" class="nav-link">Ayuda</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <section class="col-md-3 container ">
-                <div class="container">
-                    <form action="">
-                        <div class="input-group mb-2">
-                            <input type="text" class="form-control input-sm" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary btn-sm" type="submit">Search</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="container row d-flex align-items-center " id="divBotones">
-                    <img src="imagenes/persona.jpeg" alt="" id="iconoProfesor">
-                    <h3 id="nombreProfesor" class="ml-1">Hola ! Profesor Nicky</h3>
-                    <a href="index.html" class="btn btn-outline-danger" id="logOut">Log Out</a>
-                </div>
-            </section>
-            <section class="col-md-1">
-                <a href="index.html"><img src="imagenes/Spain.png" alt="España"></a>
-                <a href="indexIngles.html"><img src="imagenes/United-kingdom.png" alt="Ingles"></a>
-                <a href="indexFrances.html"><img src="imagenes/France.png" alt="Francia"></a>
-            </section>
-        </div>
-    </header>
-    <hr size="30" width="90%">
-    <main>
-        <div class="container col-md-10">
-            <table id="tablaRecursos" class="display table" style="width:100%"></table>
-        </div>
-        <div id="botones" class="container d-flex justify-content-center">
-            <div class="container col-md-6 d-flex justify-content-between">
-                <a href="index.html" class="btn btn-outline-primary btn-lg ml-1">Volver</a>
-                <a href="nuevoRecurso.html">
-                    <button type="button" class="btn btn-outline-success btn-lg ml-1">Nuevo Recurso</button>
-                </a>
-                <button type="button" class="btn btn-outline-secondary btn-lg ml-1">Imprimir</button>
-            </div>
-        </div>
-
-        <div class="modal fade" id="dialogPreview2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h1>Modificar Recurso</h1>
-                </div>
-                <div class="modal-body">
-                    <form id="formRecurso2" class="needs-validation" novalidate>
-                        <div class="wrap-input100 bg1 rs1-wrap-input100 novalidate">
-                            <input type="text" name="titulo" class="form-control" id="txtTitulo" placeholder="título" >
-                        </div>
-
-                        <div class="wrap-input100 bg1 rs1-wrap-input100 novalidate">
-                            <br>
-                                <input type="text" name="autor" class="form-control" id="exampleFormControlInput1" placeholder="autor" >
-                        </div>
-                        <div class="input-group mb-3" id="gauche">
-                            <div class="wrap-input100 bg1 rs1-wrap-input100">
-                                <br>
-                                <select class="form-control" id="Liste2" name="formato" onchange="change_valeur();">
-                                    <option value=""selected>Formato</option>
-                                    <option value="Texto">Texto</option>
-                                    <option value="Imagen">Imagen</option>
-                                    <option value="Video">Video</option>
-                                    <option value="Sitio Web">Sitio Web</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="input-group mb-3" id="droite">
-                            <div class="wrap-input100 bg1 rs1-wrap-input100">
-                                <br>
-                                <select class="form-control" id="Liste3" name="tipo">
-                                    <option value=""selected>Tipo</option>
-                                    <option value="Curso">Curso/Leccion</option>
-                                    <option value="Ejercicios">Ejercicios</option>
-                                    <option value="Ejercicios corregidos">Ejercicios corregidos</option>
-                                    <option value="Documento">Documento</option>
-                                    <option value="Evaluacion">Evaluacion</option>
-                                    <option value="Actividades">Actividades</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite">
-                                <input type="text" class="form-control" id="url" name="url" placeholder="URL" aria-label="Username" aria-describedby="addon-wrapping">
-                            </div>
-                            <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite">
-                            <input type="file" class="btn btn-primary dropdown-toggle" id="file" name="btnFile">
-                            </div>
-                        </div>
-
-                        <div class="wrap-input100 bg1 rs1-wrap-input100">
-                            <input type="text" id="txtTema" class="form-control" name="tema" placeholder="Tema de la enseñanza" aria-label="Username" aria-describedby="addon-wrapping">
-                        </div>
-
-                        <div class="wrap-input100 bg1 rs1-wrap-input100">
-                            <select class="form-control" id="cmbIdioma" name="idioma">
-                                <option value="">Idioma</option>
-                                <option value="Español">Español</option>
-                                <option value="Ingles">Ingles</option>
-                                <option value="Frances">Frances</option>
-                                <option value="Chino">Chino</option>
-                            </select>
-                        </div>
-
-
-
-                    </form>
-                    
-                </div>
-                    
-                <div class="modal-footer">
-                    <button type="button" class="btn btn- btn-lg" data-dismiss="modal">Volver</button>
-                    <button type="button" class="btn btn-success btn-lg" id="btnModificar">Modificar</button>
-                </div>
-            </div>
+  <header>
+    <div class="container-fluid row">
+      <div class="col-md-2" id="univ">          
+        <a href="index.html"><img src="imagenes/universidad.jpg" alt="" class="h-100 w-100"></a>
+      </div>
             
-        </div>
-        </div>
-    
-        <div class="modal fade" id="dialogPreview" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="previewRecursosTitulo"></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <h6 id="previewRecursosLongDesc"></h6>
-                        <img  alt="" id="lol">
-                        <video id="audioPlayer"><source src=""></video>       
-                        <!--<a href=javascript:history.go(-1)>Retour</a>-->
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="previewRecursosLongUrl"> Sitio </button>
-                        <button type="button" class="btn btn-secondary" id="previewRecursosLongArchivo"> Archivo </button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> 
-                    </div>
-                </div>
+      <nav class="navbar justify-content-center navbar-expand-md ">
+        <ul class="navbar-nav w-100 justify-content-center px-3">
+          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item  dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recursos</a>
+          <div class="dropdown-menu">
+            <a href="misRecursos.html" class="dropdown-item">Ver Recursos</a>
+            <a href="nuevoRecurso.html" class="dropdown-item">Crear nuevo Recurso</a>
+          </div>
+          </li>
+          <li class="nav-item active"><a href="misCursos.html" class="nav-link">Mis cursos</a></li>
+          <li class="nav-item active"><a href="misUnidades.html" class="nav-link">Mis Unidades</a></li>
+          <li class="nav-item  dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reportes</a>
+          <div class="dropdown-menu">
+            <a href="SobreCursos.html" class="dropdown-item">Sobre Cursos</a>
+            <a href="sobreRecursos.html" class="dropdown-item">Sobre Recursos</a>
+          </div>
+          </li>
+          <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+          <li class="nav-item"><a href="ayuda.html" class="nav-link">Ayuda</a></li>
+          <form action="">
+            <div class="input-group mb-1 mt-0">
+              <input type="text" class="form-control input-sm" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary btn-sm" type="submit">Search</button>
+              </div>
             </div>
-        </div>
+          </form>
+          <a href="https://www.facebook.com/Universidad.de.Belgrano/" class="icon-facebook" id="facebook" target="_blank"><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-f.png"></a>
+          <a href="https://twitter.com/ubeduar?lang=es" class="icon-twitter" id="twitter" target="_blank"><img src="https://img.icons8.com/color/30/000000/twitter.png"></a>
+          <a href="" class="icon-instagram" id="instagram" target="_blank"><img src="imagenes/instagram.png" alt=""></a>
+          <a href="" class="icon-linkedin" id="linkedin" target="_blank"><img src="https://img.icons8.com/color/30/000000/linkedin-2.png"></a>
+        </ul>
+      </nav>
+  </header>
+  <hr size="30" width="90%">
+  <main>
+<div class="container" id="fluide">
+	<div class="col-md-4" id="p">
+		<h3 align = "center"; class="my-4">Search Filter</h3>
+		<form id="search-form" action="" method="POST" enctype="multipart/form-data">
+			<div class="form-group col-xs-9">
+				<input class="form-control" type="text" placeholder="Search" />
+			</div>
+			<div class="form-group col-xs-3">
+				<button type="submit" class="btn btn-block btn-primary">Search</button>
+			</div>
+		</form>
+		<form>
+			<div class="wrap-input100 bg1 rs1-wrap-input100">
+				<select data-filter="tipo" class="filter-tipo filter form-control">
+					<option value="">Select Tipo</option>
+          <option value="">Show All</option>
+          <option value="Curso">Curso</option>
+          <option value="Ejercicios">Ejercicios</option>
+          <option value="Ejercicios corregidos">Ejercicios corregidos</option>
+          <option value="Documento">Documento</option>
+          <option value="Evaluacion">Evaluacion</option>
+          <option value="Actividades">Actividades</option>
+				</select>
+			</div>
+			<div class="wrap-input100 bg1 rs1-wrap-input100">
+				<select data-filter="formato" class="filter-formato filter form-control">
+					<option value="">Select Formato</option>
+          <option value="">Show All</option>
+          <option value="Texto">Texto</option>
+          <option value="Imagen">Imagen</option>
+          <option value="Video">Video</option>
+          <option value="Sitio Web">Sitio Web</option>
+				</select>
+			</div>
+			<div class="wrap-input100 bg1 rs1-wrap-input100">
+				<select data-filter="idioma" class="filter-idioma filter form-control">
+					<option value="">Select Idioma</option>
+          <option value="">Show All</option>
+          <option value="Frances">Frances</option>
+          <option value="Español">Español</option>
+          <option value="Ingles">Ingles</option>
+          <option value="Chino">Chino</option>
+				</select>
+			</div>
+		</form>
+  </div>
+  <h1 class="my-4">Mis Recursos</h1>
+	<div id="pro">
 
-    </main>
-    <footer class="footer fluid-bottom mt-4">
-        <!--fixed-bottom mt-4-->
-        <div class="social">
-            <a href="https://www.facebook.com/Universidad.de.Belgrano/" class="icon-facebook" id="facebook" target="_blank"><img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-f.png"></a>
-            <a href="https://twitter.com/ubeduar?lang=es" class="icon-twitter" id="twitter" target="_blank"><img src="https://img.icons8.com/color/30/000000/twitter.png"></a>
-            <a href="" class="icon-instagram" id="instagram" target="_blank"><img src="imagenes/instagram.png" alt=""></a>
-            <a href="" class="icon-linkedin" id="linkedin" target="_blank"><img src="https://img.icons8.com/color/30/000000/linkedin-2.png"></a>
-        </div>
-    </footer>
+	</div>
+</div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
+<!-- Modificar recurso -->
+
+<div class="modal fade" id="dialogPreview2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h1>Modificar Recurso</h1>
+          </div>
+          <div class="modal-body">
+          <form id="formRecurso2" class="needs-validation" novalidate>
+              <div class="wrap-input100 bg1 rs1-wrap-input100 novalidate">
+                  <input type="text" name="titulo" class="form-control" id="txtTitulo" placeholder="título" >
+              </div>
+
+              <div class="wrap-input100 bg1 rs1-wrap-input100 novalidate">
+                  <br>
+                      <input type="text" name="autor" class="form-control" id="exampleFormControlInput1" placeholder="autor" >
+              </div>
+              <div class="input-group mb-3" id="gauche">
+                  <div class="wrap-input100 bg1 rs1-wrap-input100">
+                      <br>
+                      <select class="form-control" id="Liste2" name="formato" onchange="change_valeur();">
+                          <option value=""selected>Formato</option>
+                          <option value="Texto">Texto</option>
+                          <option value="Imagen">Imagen</option>
+                          <option value="Video">Video</option>
+                          <option value="Sitio Web">Sitio Web</option>
+                      </select>
+                  </div>
+              </div>
+
+              <div class="input-group mb-3" id="droite">
+                  <div class="wrap-input100 bg1 rs1-wrap-input100">
+                      <br>
+                      <select class="form-control" id="Liste3" name="tipo">
+                          <option value=""selected>Tipo</option>
+                          <option value="Curso">Curso/Leccion</option>
+                          <option value="Ejercicios">Ejercicios</option>
+                          <option value="Ejercicios corregidos">Ejercicios corregidos</option>
+                          <option value="Documento">Documento</option>
+                          <option value="Evaluacion">Evaluacion</option>
+                          <option value="Actividades">Actividades</option>
+                      </select>
+                  </div>
+              </div>
+
+              <div class="input-group mb-3">
+                  <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite">
+                      <input type="text" class="form-control" id="url" name="url" placeholder="URL" aria-label="Username" aria-describedby="addon-wrapping">
+                  </div>
+                  <div class="wrap-input100 bg1 rs1-wrap-input100" id="droite">
+                  <input type="file" class="btn btn-primary dropdown-toggle" id="file" name="btnFile">
+                  </div>
+              </div>
+
+              <div class="wrap-input100 bg1 rs1-wrap-input100">
+                  <input type="text" id="txtTema" class="form-control" name="tema" placeholder="Tema de la enseñanza" aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+
+              <div class="wrap-input100 bg1 rs1-wrap-input100">
+                  <select class="form-control" id="cmbIdioma" name="idioma">
+                      <option value="">Idioma</option>
+                      <option value="Español">Español</option>
+                      <option value="Ingles">Ingles</option>
+                      <option value="Frances">Frances</option>
+                      <option value="Chino">Chino</option>
+                  </select>
+              </div>
+
+          </form>
+          
+      </div>
+          
+      <div class="modal-footer">
+          <button type="button" class="btn btn- btn-lg" data-dismiss="modal">Volver</button>
+          <button type="button" class="btn btn-success btn-lg" id="btnModificar">Modificar</button>
+      </div>
+  </div>
+  
+</div>
+</div>
+</main>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script><script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+
+<script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="js/Helper.js"></script>
-    <script src="js/misRecursos.js"></script>
-
-    <script>
-            function change_valeur() {
-                var select = document.getElementById("Liste2");
-                var choice = select.selectedIndex;
-                var texte = select.options[choice].value;
-                if (choice == 4){
-                    $('#txtUrl').css({visibility:"visible"});
-                    $('#url').css({visibility:"visible"});
-                    $('#file').css({visibility:"hidden"});
-                }
-                else if ((choice == 1) || (choice == 2) || (choice == 3)){
-                    $('#txtUrl').css({visibility:"hidden"});
-                    $('#url').css({visibility:"hidden"});
-                    $('#file').css({visibility:"visible"});
-                }
-            }
-    </script>
-
-<script> function play(idPlayer, control) {
-    var player = document.querySelector('#' + idPlayer);
-	
-    if (player.paused) {
-        player.play();
-        control.textContent = 'Pause';
-    } else {
-        player.pause();	
-        control.textContent = 'Play';
-    }
-}
-
-function resume(idPlayer) {
-    var player = document.querySelector('#' + idPlayer);
-	
-    player.currentTime = 0;
-    player.pause();
-}
-</script>
-    
-
-</body>
-
-</html>
+	<script src="js/Helper.js"></script>
+	<script src="js/misRecursos2.js"></script>
+</body></html>
